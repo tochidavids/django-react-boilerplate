@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
-export default function Navbar() {
+export default function Layout() {
 	return (
 		<div className="page">
 			<header>
@@ -30,7 +30,9 @@ export default function Navbar() {
                         <Link to='/resources'>resources</Link>
                     </li>
                 </nav>
+
 			</header>
+            <Outlet />
 		</div>
 	);
 }
