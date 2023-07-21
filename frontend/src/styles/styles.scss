@@ -1,0 +1,82 @@
+$light-blue: rgb(0, 101, 255);
+$dark-blue: #0052cc;
+$black: rgb(9, 30, 66);
+
+@mixin flexCenter() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-style: normal;
+	color: $black;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+}
+
+// ===============
+// Header
+// ===============
+
+header {
+	height: 4rem;
+	width: 100vw;
+	@include flexCenter();
+	justify-content: space-between;
+	padding-left: 1rem;
+	border: 1px solid red;
+
+	.img-container {
+		height: 2rem;
+	}
+
+	.left {
+		@include flexCenter();
+		gap: 2rem;
+	}
+
+	nav {
+		@include flexCenter();
+		gap: 1.5rem;
+		text-transform: capitalize;
+		font-weight: 500;
+		letter-spacing: 0.5px;
+
+		a:hover {
+			color: $light-blue;
+		}
+
+		.plans {
+			cursor: pointer;
+
+			i {
+				margin-left: 0.25rem;
+			}
+
+			&:hover {
+				color: $light-blue;
+				i {
+					color: $light-blue;
+				}
+			}
+		}
+	}
+}
+
+// ===============
+//
+// ===============

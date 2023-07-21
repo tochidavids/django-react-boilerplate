@@ -1,1 +1,63 @@
-/*# sourceMappingURL=styles.css.map */
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-style: normal;
+  color: rgb(9, 30, 66);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(9, 30, 66);
+}
+
+header {
+  height: 4rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+  border: 1px solid red;
+}
+header .img-container {
+  height: 2rem;
+}
+header .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+header nav a:hover {
+  color: rgb(0, 101, 255);
+}
+header nav .plans {
+  cursor: pointer;
+}
+header nav .plans i {
+  margin-left: 0.25rem;
+}
+header nav .plans:hover {
+  color: rgb(0, 101, 255);
+}
+header nav .plans:hover i {
+  color: rgb(0, 101, 255);
+}/*# sourceMappingURL=styles.css.map */
