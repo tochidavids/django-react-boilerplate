@@ -9,6 +9,7 @@
 -   [Overview](#overview)
     -   [Built With](#built-with)
 -   [How to use](#how-to-use)
+-   [Acknowledgements](#acknowledgements)
 -   [Contact](#contact)
 
 <!-- OVERVIEW -->
@@ -39,7 +40,10 @@ $ git clone https://github.com/tochidavids/Email-Server
 $ python manage.py runserver
 ```
 
+## Acknowledgements
 
+- [Connecting React to Django](https://dev.to/nagatodev/how-to-connect-django-to-reactjs-1a71)
+- [Using Django Rest Framework]()
 
 ## Contact
 
