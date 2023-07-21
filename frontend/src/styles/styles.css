@@ -8,6 +8,10 @@
   color: rgb(9, 30, 66);
 }
 
+body {
+  overflow-x: hidden;
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -47,18 +51,6 @@ header nav {
 header nav a:hover {
   color: rgb(0, 101, 255);
 }
-header nav .plans {
-  cursor: pointer;
-}
-header nav .plans i {
-  margin-left: 0.25rem;
-}
-header nav .plans:hover {
-  color: rgb(0, 101, 255);
-}
-header nav .plans:hover i {
-  color: rgb(0, 101, 255);
-}
 header .sign-in {
   display: flex;
   justify-content: center;
@@ -78,6 +70,65 @@ header .sign-up {
   color: #fff;
 }
 
+@media screen and (max-width: 975px) {
+  header i {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  header .menu {
+    display: none;
+  }
+  header.show-menu {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  header.show-menu .menu {
+    display: flex;
+  }
+  header.show-menu .home-link {
+    padding: 0.5rem 0;
+  }
+  header.show-menu .left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  header.show-menu nav {
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 400;
+    gap: 0;
+    margin-top: 1rem;
+  }
+  header.show-menu nav a {
+    display: block;
+    width: calc(100vw - 2rem);
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #c3c3c3;
+    font-size: 18px;
+  }
+  header.show-menu nav .first {
+    border-top: 1px solid #c3c3c3;
+  }
+  header.show-menu .sign-in {
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 18px;
+  }
+  header.show-menu .sign-in .login {
+    border: 1px solid rgb(0, 101, 255);
+  }
+  header.show-menu .sign-in * {
+    width: calc(100vw - 2rem);
+  }
+}
 .homepage {
   display: grid;
   grid-template-columns: 1fr 1fr;
