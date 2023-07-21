@@ -96,4 +96,30 @@ header .sign-up {
 }
 .homepage p {
   font-size: 20px;
+}
+
+@media screen and (max-width: 975px) {
+  .homepage {
+    grid-template-columns: 1fr;
+    padding: 4rem 6rem;
+    height: 100%;
+    gap: 2rem;
+    width: 100%;
+  }
+  .homepage .left {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .homepage {
+    padding: 4rem;
+  }
+  .homepage h1 {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .homepage {
+    padding: 4rem 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

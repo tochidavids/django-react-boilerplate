@@ -42,6 +42,7 @@ $ python manage.py runserver
 
 ## Acknowledgements
 
+- [Trello](https://trello.com/)
 - [Connecting React to Django](https://dev.to/nagatodev/how-to-connect-django-to-reactjs-1a71)
 - [Using Django Rest Framework]()
 - [Google Fonts](https://fonts.google.com/)

@@ -101,8 +101,6 @@ header {
 	grid-template-columns: 1fr 1fr;
 	justify-content: center;
 	align-items: center;
-	// padding: 2rem 4rem;
-	// padding-right: 0;
 	padding-left: 4rem;
 	gap: 4rem;
 	background: linear-gradient(
@@ -122,6 +120,35 @@ header {
 
 	p {
 		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 975px) {
+	.homepage {
+		grid-template-columns: 1fr;
+		padding: 4rem 6rem;
+		height: 100%;
+		gap: 2rem;
+		width: 100%;
+
+		.left {
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.homepage {
+		padding: 4rem;
+		h1 {
+			font-size: 35px;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.homepage {
+		padding: 4rem 1rem;
 	}
 }
 
