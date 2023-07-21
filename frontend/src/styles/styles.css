@@ -76,4 +76,19 @@ header .sign-up {
 header .sign-up {
   background-color: rgb(0, 101, 255);
   color: #fff;
+}
+
+.homepage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4rem;
+  gap: 4rem;
+}
+.homepage h1 {
+  font-size: 45px;
+}
+.homepage p {
+  font-size: 20px;
 }/*# sourceMappingURL=styles.css.map */

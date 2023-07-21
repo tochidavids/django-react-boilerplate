@@ -77,18 +77,39 @@ header {
 	.sign-in {
 		@include flexCenter();
 	}
-    
+
 	.login,
 	.sign-up {
-        display: block;
+		display: block;
 		padding: 0 1.5rem;
 		height: 4rem;
-        @include flexCenter();
+		@include flexCenter();
 	}
 
 	.sign-up {
 		background-color: $light-blue;
 		color: #fff;
+	}
+}
+
+// ===============
+// Homepage
+// ===============
+
+.homepage {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	align-items: center;
+	padding-left: 4rem;
+	gap: 4rem;
+
+	h1 {
+		font-size: 45px;
+	}
+
+	p {
+		font-size: 20px;
 	}
 }
 
