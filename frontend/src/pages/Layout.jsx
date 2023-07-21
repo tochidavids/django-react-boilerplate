@@ -1,9 +1,6 @@
-import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 export default function Layout() {
-    const [showPlans, setShowPlans] = useState(false)
-
 	return (
 		<div className="page">
 			<header>
@@ -23,9 +20,8 @@ export default function Layout() {
 						<li>
 							<Link to="/solutions">solutions</Link>
 						</li>
-						<li className="plans" onClick={() => setShowPlans(old => !old)}>
-							Plans
-							<i className="fa-solid fa-chevron-down"></i>
+						<li>
+							<Link to="/plans">plans</Link>
 						</li>
 						<li>
 							<Link to="/pricing">pricing</Link>
@@ -44,15 +40,7 @@ export default function Layout() {
 					</a>
 				</div>
 			</header>
-            {showPlans ? <section className="plans-menu">
-                <div className="left">
-                    <div className="card">
-                        <Link to='/standard' className="card-link"></Link>
-                        <Link to='/premium' className="card-link"></Link>
-                        <Link to='/enterprise' className="card-link"></Link>
-                    </div>
-                </div>
-            </section> : ''}
+
 			<Outlet />
 		</div>
 	);
