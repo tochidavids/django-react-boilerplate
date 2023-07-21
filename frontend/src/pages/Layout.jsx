@@ -13,26 +13,29 @@ export default function Layout() {
 					</div>
 				</Link>
 				<nav>
-                    <li>
-                        <Link to='/features'>features</Link>
-                    </li>
-                    <li>
-                        <Link to='/solutions'>solutions</Link>
-                    </li>
-                    <li className="plans">
-                        Plans
-                        <i className="fa-solid fa-chevron-down"></i>
-                    </li>
-                    <li>
-                        <Link to='/pricing'>pricing</Link>
-                    </li>
-                    <li>
-                        <Link to='/resources'>resources</Link>
-                    </li>
-                </nav>
-
+					<li>
+						<Link to="/features">features</Link>
+					</li>
+					<li>
+						<Link to="/solutions">solutions</Link>
+					</li>
+					<li className="plans">
+						Plans
+						<i className="fa-solid fa-chevron-down"></i>
+					</li>
+					<li>
+						<Link to="/pricing">pricing</Link>
+					</li>
+					<li>
+						<Link to="/resources">resources</Link>
+					</li>
+				</nav>
+				<div className="sign-in">
+					<div className="login">Log in</div>
+					<div className="sign-up">Get Trello for free</div>
+				</div>
 			</header>
-            <Outlet />
+			<Outlet />
 		</div>
 	);
 }
