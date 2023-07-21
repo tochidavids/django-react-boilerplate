@@ -16,7 +16,7 @@ export default function Layout() {
 	}, [showMenu]);
 
 	return (
-		<div className="page">
+		<>
 			<header ref={headerRef}>
 				<section className="left">
 					<Link to="/" className="home-link">
@@ -75,6 +75,6 @@ export default function Layout() {
 			</header>
 
 			<Outlet />
-		</div>
+		</>
 	);
 }
