@@ -11,7 +11,7 @@
 >
 	{% csrf_token %}
 
-	<h2 class="text-2xl font-bold">Login</h2>
+	<h2 class="text-2xl font-bold">Log In</h2>
 
 	{% if message %}
 	<p class="text-red-500">{{ message }}</p>
@@ -30,7 +30,7 @@
         placeholder="Password"
         class="border border-stone-300 border-solid px-4 py-2 outline-0 w-72"
     />
-	<input class="bg-blue-500 text-white h-10 font-medium cursor-pointer hover:bg-blue-700" type="submit" value="Login" />
+	<input class="bg-blue-500 text-white h-10 font-medium cursor-pointer hover:bg-blue-700" type="submit" value="Log In" />
 
 	<p>
 		Don't have an account? <a class="text-blue-400" href="{% url 'signup' %}">Sign up here.</a>

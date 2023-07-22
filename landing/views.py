@@ -63,6 +63,6 @@ def signup(request):
                 "message": "Email address already taken."
             })
         login(request, user)
-        return HttpResponseRedirect(reverse("index"))
+        return HttpResponseRedirect("main/index.html")
     else:
         return render(request, "signup.html")
