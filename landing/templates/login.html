@@ -1,5 +1,7 @@
 {% extends "layout.html" %} 
 
+{% load socialaccount %}
+
 {% block title %}Log In{% endblock %} 
 
 {% block form %}
@@ -7,7 +9,7 @@
 <form
 	action="{% url 'login' %}"
 	method="post"
-	class="p-16 flex flex-col justify-center content-center gap-4 text-center bg-white shadow-md"
+	class="p-16 pt-12 flex flex-col justify-center content-center gap-3 text-center bg-white shadow-md"
 >
 	{% csrf_token %}
 
@@ -32,8 +34,16 @@
     />
 	<input class="bg-blue-500 text-white h-10 font-medium cursor-pointer hover:bg-blue-700" type="submit" value="Log In" />
 
-	<p>
-		Don't have an account? <a class="text-blue-400" href="{% url 'signup' %}">Sign up here.</a>
+    <p class="text-center text-sm font-bold">OR</p>
+
+	<a class="shadow-[0px_0px_5px_0px_rgba(195,195,195,1)] h-10 font-bold text-gray-600 text-sm hover:bg-gray-50 flex items-center justify-center" href="{% provider_login_url 'google' %}">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/706px-Google_%22G%22_Logo.svg.png" alt="" class="w-auto h-4 pr-2">
+		Continue with Google
+	</a>
+
+
+	<p class="mt-2">
+		Don't have an account? <a class="text-blue-500 font-medium" href="{% url 'signup' %}">Sign up here.</a>
 	</p>
 </form>
 
