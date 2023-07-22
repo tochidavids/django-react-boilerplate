@@ -4,19 +4,4 @@
 
 body {
   overflow: hidden;
-}
-
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-}
-
-form {
-  width: 500px;
-  padding: 4rem;
-  border: 1px solid #c3c3c3;
-  border-radius: 20px;
 }/*# sourceMappingURL=styles.css.map */

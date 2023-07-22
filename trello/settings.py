@@ -60,7 +60,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'landing', 'frontend', 'build'),
-            os.path.join(BASE_DIR, 'landing', 'templates')
+            os.path.join(BASE_DIR, 'landing', 'templates'),
+            os.path.join(BASE_DIR, 'main', 'frontend', 'dist'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -138,6 +139,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'landing', 'frontend', 'build', 'static'),
     os.path.join(BASE_DIR, 'landing', 'static'),
+    os.path.join(BASE_DIR, 'main', 'frontend', 'dist', 'assets'),
 ]
 
 # Default primary key field type
