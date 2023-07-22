@@ -27,7 +27,7 @@ def login_view(request):
         # Check if authentication successful
         if user is not None:
             login(request, user)
-            return HttpResponseRedirect(reverse("index"))
+            return HttpResponseRedirect('main/index.html')
         else:
             return render(request, "login.html", {
                 "message": "Invalid email and/or password."
@@ -35,9 +35,11 @@ def login_view(request):
     else:
         return render(request, "login.html")
 
+
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse("index"))
+
 
 def signup(request):
     if request.method == "POST":
