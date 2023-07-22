@@ -1,32 +1,49 @@
-{% extends "layout.html" %} 
+{% extends "layout.html" %} {% block title %}Sign Up{% endblock %} {% block form
+%}
 
-{% block title %}Sign Up{% endblock %}
+<form
+	action="{% url 'login' %}"
+	method="post"
+	class="absolute top-0 left-0 translate-x-1/2 translate-y-1/2 w-80 h-80 p-16 flex flex-col justify-center content-center gap-4"
+>
+	{% csrf_token %}
 
-{% block form %}
+	<h2>Sign Up</h2>
 
-<form action="{% url 'login' %}" method="post">
-    {% csrf_token %}
-
-    <h2>Sign Up</h2>
-    
-    {% if message %}
-    <div>{{ message }}</div>
-    {% endif %}
+	{% if message %}
+	<div>{{ message }}</div>
+	{% endif %}
 
 	<form action="{% url 'register' %}" method="post">
-        {% csrf_token %}
-        <div class="form-group">
-            <input class="form-control" type="email" name="email" placeholder="Email Address">
-        </div>
-        <div class="form-group">
-            <input class="form-control" type="password" name="password" placeholder="Password">
-        </div>
-        <div class="form-group">
-            <input class="form-control" type="password" name="confirmation" placeholder="Confirm Password">
-        </div>
-        <input class="btn btn-primary" type="submit" value="Register">
-    </form>
+		{% csrf_token %}
+		<div class="form-group">
+			<input
+				class="form-control"
+				type="email"
+				name="email"
+				placeholder="Email Address"
+			/>
+		</div>
+		<div class="form-group">
+			<input
+				class="form-control"
+				type="password"
+				name="password"
+				placeholder="Password"
+			/>
+		</div>
+		<div class="form-group">
+			<input
+				class="form-control"
+				type="password"
+				name="confirmation"
+				placeholder="Confirm Password"
+			/>
+		</div>
+		<input class="btn btn-primary" type="submit" value="Register" />
+	</form>
 
-    Already have an account? <a href="{% url 'login' %}">Log In here.</a>
+	Already have an account? <a href="{% url 'login' %}">Log In here.</a>
 
-{% endblock %}
+	{% endblock %}
+</form>

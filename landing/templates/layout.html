@@ -12,10 +12,11 @@
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="{% static 'styles.css' %}" />
+        <script src="https://cdn.tailwindcss.com"></script>
+		<!-- <link rel="stylesheet" href="{% static 'styles.css' %}" /> -->
 		<title>{% block title %} {% endblock %}</title>
 	</head>
 	<body>
-		<div class="form-container">{% block form %}{% endblock %}</div>
+		<div class="bg-stone-100 w-screen h-screen relative flex justify-center items-center border">{% block form %}{% endblock %}</div>
 	</body>
 </html>
