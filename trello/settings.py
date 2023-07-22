@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'landing',
+    'main',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -95,7 +96,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'landing.User'
+AUTH_USER_MODEL = 'main.User'
 
 
 # Password validation
