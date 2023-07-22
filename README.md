@@ -48,6 +48,7 @@ $ python manage.py runserver
 - [Multiple React Apps](https://stackoverflow.com/questions/70151868/django-react-connecting-multiple-apps-from-one-template)
 - [React Router DOM](https://reactrouter.com/)
 - [Google Fonts](https://fonts.google.com/)
+- [Connecting Google Authentication](https://dev.to/mdrhmn/django-google-authentication-using-django-allauth-18f8)
 
 ## Contact
 
