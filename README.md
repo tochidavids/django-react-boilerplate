@@ -45,6 +45,7 @@ $ python manage.py runserver
 - [Trello](https://trello.com/)
 - [Connecting React to Django](https://dev.to/nagatodev/how-to-connect-django-to-reactjs-1a71)
 - [Using Django Rest Framework]()
+- [Multiple React Apps](https://stackoverflow.com/questions/70151868/django-react-connecting-multiple-apps-from-one-template)
 - [React Router DOM](https://reactrouter.com/)
 - [Google Fonts](https://fonts.google.com/)
 
