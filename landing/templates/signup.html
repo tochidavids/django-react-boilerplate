@@ -18,18 +18,28 @@
 	{% if message %}
 	<p class="text-red-500">{{ message }}</p>
 	{% endif %}
-
+	
+	<div class="flex justify-center-items-center gap-2 w-72">
+		<input
+			autofocus
+			type="text"
+			name="firstname"
+			placeholder="First Name"
+			class="border border-stone-300 border-solid px-4 py-2 outline-0 w-1/2"
+		/>
+		<input
+			autofocus
+			type="text"
+			name="lastname"
+			placeholder="Last Name"
+			class="border border-stone-300 border-solid px-4 py-2 outline-0 w-1/2"
+		/>
+	</div>
 	<input
 		autofocus
 		type="text"
 		name="username"
 		placeholder="Username"
-		class="border border-stone-300 border-solid px-4 py-2 outline-0 w-72"
-	/>
-	<input
-		type="text"
-		name="display-name"
-		placeholder="Display Name"
 		class="border border-stone-300 border-solid px-4 py-2 outline-0 w-72"
 	/>
 	<input

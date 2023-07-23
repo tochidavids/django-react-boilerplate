@@ -144,7 +144,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'landing', 'frontend', 'build', 'static'),
     os.path.join(BASE_DIR, 'landing', 'static'),
-    os.path.join(BASE_DIR, 'main', 'frontend', 'dist', 'assets'),
+    os.path.join(BASE_DIR, 'main', 'frontend', 'dist', 'main', 'static'),
 ]
 
 # Default primary key field type
