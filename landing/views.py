@@ -44,6 +44,8 @@ def logout_view(request):
 def signup(request):
     if request.method == "POST":
         email = request.POST["email"]
+        username = request.POST["username"]
+        display_name = request.POST["display-name"]
 
         # Ensure password matches confirmation
         password = request.POST["password"]
