@@ -23,12 +23,10 @@ def index(request):
 
 def login_view(request):
     if request.method == "POST":
-
         # Attempt to sign user in
         email = request.POST["email"]
         password = request.POST["password"]
-        user = authenticate(request, email=email, password=password)
-
+        user = authenticate(email=email, password=password)
         # Check if authentication successful
         if user is not None:
             login(request, user)
@@ -52,21 +50,16 @@ def signup(request):
         if form.is_valid():
             # attempt to create a new user
             try:
-                # user = User.objects.create_user(
-                #     username=form.cleaned_data['username'],
-                #     password=form.cleaned_data['password'],
-                #     email=form.cleaned_data['email'],
-                #     first_name=form.cleaned_data['firstname'],
-                #     last_name=form.cleaned_data['lastname'],
-                # )
-                # user.save()
                 form.save()
-                messages.info(request, "Thanks for registering. You are now logged in.")
             except IntegrityError as e:
                 print(e)
                 return render(request, "signup.html", {
                     "message": "Something went wrong."
                 })
+            user = authenticate(
+                username=form.cleaned_data['username'],
+                password=form.cleaned_data['password'],
+            )
             login(request, user)
             return HttpResponseRedirect('/u')
         else:
