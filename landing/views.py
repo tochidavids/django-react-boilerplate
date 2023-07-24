@@ -6,7 +6,8 @@ from django.db import IntegrityError
 # from django.http import JsonResponse
 from django.shortcuts import HttpResponse, HttpResponseRedirect, render
 from django.urls import reverse
-from django.contrib.auth.forms import UserCreationForm  
+from django.contrib.auth.models import User
+from .forms import SignUpForm
 # from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
@@ -14,7 +15,8 @@ from django.contrib.auth.forms import UserCreationForm
 
 def index(request):
     if request.user.is_authenticated:
-        return HttpResponseRedirect(reverse("main:index")) 
+        return HttpResponseRedirect('/u') 
+        # return HttpResponseRedirect(reverse("main:index")) 
     else:    
         return render(request, "index.html")
 
@@ -30,7 +32,7 @@ def login_view(request):
         # Check if authentication successful
         if user is not None:
             login(request, user)
-            return render(request, "main/index.html")
+            return HttpResponseRedirect('/u') 
         else:
             return render(request, "login.html", {
                 "message": "Invalid email and/or password."
@@ -41,38 +43,38 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return HttpResponseRedirect(reverse("index"))
+    return HttpResponseRedirect('/')
 
 def signup(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-
-    # check if passwords match
-        password = request.POST["password"]
-        confirmation = request.POST["confirmation"]
-        if password != confirmation:
-            return render(request, "signup.html", {
-                "message": "Passwords must match."
-            })
+        form = SignUpForm(request.POST)
 
         if form.is_valid():
-            new_user = form.save()
             # attempt to create a new user
             try:
-                new_user = authenticate(
-                    username=form.cleaned_data['username'],
-                    password=form.cleaned_data['password'],
-                    email=form.cleaned_data['email'],
-                    first_name=form.cleaned_data['firstname'],
-                    last_name=form.cleaned_data['lastname'],
-                )
-                login(request, new_user)
+                # user = User.objects.create_user(
+                #     username=form.cleaned_data['username'],
+                #     password=form.cleaned_data['password'],
+                #     email=form.cleaned_data['email'],
+                #     first_name=form.cleaned_data['firstname'],
+                #     last_name=form.cleaned_data['lastname'],
+                # )
+                # user.save()
+                form.save()
                 messages.info(request, "Thanks for registering. You are now logged in.")
             except IntegrityError as e:
                 print(e)
                 return render(request, "signup.html", {
-                    "message": "Email address and/or username already taken."
+                    "message": "Something went wrong."
                 })
-            return HttpResponseRedirect(reverse("main:index"))
-    else:
-        return render(request, "signup.html")
+            login(request, user)
+            return HttpResponseRedirect('/u')
+        else:
+            if form.errors:
+                return render(request, "signup.html", {
+                        "message": json.loads(form.errors.as_json())['__all__'][0]['message']
+                    })
+            
+    return render(request, "signup.html", {
+            "message": 'Something went wrong.'
+        })
