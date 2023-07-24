@@ -24,7 +24,7 @@
 
 -   [Django](https://www.djangoproject.com/)
 -   [SCSS](https://sass-lang.com/)
--   [Bootstrap](https://getbootstrap.com/)
+-   [Tailwind](https://tailwindcss.com/)
 
 ## How To Use
 

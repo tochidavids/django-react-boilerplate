@@ -533,4 +533,27 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-/*# sourceMappingURL=output.css.map */
+
+.flex {
+  display: flex;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+body {
+  overflow-x: hidden;
+}

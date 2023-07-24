@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;/*# sourceMappingURL=input.css.map */
+@tailwind utilities;
+
+body {
+    overflow-x: hidden;
+}

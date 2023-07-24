@@ -5,12 +5,11 @@ from django.contrib.postgres.fields import ArrayField
 # Create your models here.
 
 class User(AbstractUser):
-    display_name = models.CharField(max_length=50)
     username = models.CharField(max_length=50, unique=True)
     recent = ArrayField(models.IntegerField(), default=list)
 
     def __str__(self):
-        return self.display_name
+        return self.first_name + self.last_name
 
 class Workspace(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='workspace_creator')
