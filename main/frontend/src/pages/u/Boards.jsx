@@ -1,3 +1,5 @@
-export default function Boards() {
+function Boards() {
     return <>boards</>
 }
+
+export default Boards

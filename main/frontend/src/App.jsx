@@ -3,9 +3,8 @@ import Layout from "./pages/Layout";
 import Boards from "./pages/u/Boards";
 
 function App() {
-
   return (
-    <>test
+    <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
