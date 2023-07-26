@@ -20,6 +20,13 @@ from main import views
 
 router = routers.DefaultRouter()                   
 router.register(r'users', views.UsersView, 'users')
+router.register(r'boards', views.BoardsView, 'boards')
+router.register(r'workspaces', views.WorkspacesView, 'workspaces')
+router.register(r'cards', views.CardsView, 'cards')
+router.register(r'lists', views.ListsView, 'lists')
+router.register(r'checklists', views.ChecklistsView, 'checklists')
+router.register(r'labels', views.LabelsView, 'labels')
+router.register(r'list-item', views.ListItemsView, 'list-item')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
