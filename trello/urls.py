@@ -19,6 +19,7 @@ from rest_framework import routers
 from main import views 
 
 router = routers.DefaultRouter()                   
+router.register(r'current-user', views.CurrentUserView, 'current-user')
 router.register(r'users', views.UsersView, 'users')
 router.register(r'boards', views.BoardsView, 'boards')
 router.register(r'workspaces', views.WorkspacesView, 'workspaces')

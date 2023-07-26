@@ -39,6 +39,18 @@ def index(request, view):
 #         user.delete()
 #         return Response(status=status.HTTP_204_NO_CONTENT)
 
+class CurrentUserView(viewsets.ModelViewSet):
+    serializer_class = UserSerializer 
+    queryset = User.objects.all()
+
+    def get_object(self):
+        pk = self.kwargs.get('pk')
+
+        if pk == "current":
+            return self.request.user
+
+        return super().get_object()
+
 class UsersView(viewsets.ModelViewSet):
     serializer_class = UserSerializer 
     queryset = User.objects.all()
