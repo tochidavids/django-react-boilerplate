@@ -9,7 +9,7 @@ class User(AbstractUser):
     recent = ArrayField(models.IntegerField(), default=list)
 
     def __str__(self):
-        return self.first_name + self.last_name
+        return self.first_name, self.last_name
 
 class Workspace(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='workspace_creator')
