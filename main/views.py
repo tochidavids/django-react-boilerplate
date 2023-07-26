@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .serializers import UserSerializer
+from .serializers import UserSerializer, BoardSerializer, WorkspaceSerializer, ListSerializer, CardSerializer, LabelSerializer, ChecklistSerializer, ListItemSerializer
 from .models import User, Board, Workspace, List, Card, Label, Checklist, ListItem
 
 # Create your views here.
@@ -42,3 +42,31 @@ def index(request, view):
 class UsersView(viewsets.ModelViewSet):
     serializer_class = UserSerializer 
     queryset = User.objects.all()
+
+class BoardsView(viewsets.ModelViewSet):
+    serializer_class = BoardSerializer 
+    queryset = Board.objects.all()
+
+class WorkspacesView(viewsets.ModelViewSet):
+    serializer_class = WorkspaceSerializer 
+    queryset = Workspace.objects.all()
+
+class ListsView(viewsets.ModelViewSet):
+    serializer_class = ListSerializer 
+    queryset = List.objects.all()
+
+class CardsView(viewsets.ModelViewSet):
+    serializer_class = CardSerializer 
+    queryset = Card.objects.all()
+
+class LabelsView(viewsets.ModelViewSet):
+    serializer_class = LabelSerializer 
+    queryset = Label.objects.all()
+
+class ChecklistsView(viewsets.ModelViewSet):
+    serializer_class = ChecklistSerializer 
+    queryset = Checklist.objects.all()
+
+class ListItemsView(viewsets.ModelViewSet):
+    serializer_class = ListItemSerializer 
+    queryset = ListItem.objects.all() 
