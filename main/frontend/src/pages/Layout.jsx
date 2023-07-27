@@ -2,7 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 
 function Layout() {
 	return (
-		<>
+		<div className="dark">
 			<header className="flex justify-between items-center h-12 w-screen px-8">
 				<nav className="flex justify-center items-center gap-8">
 					<Link to="/">
@@ -47,7 +47,7 @@ function Layout() {
 				</nav>
 			</header>
 			<Outlet />
-		</>
+		</div>
 	);
 }
 
