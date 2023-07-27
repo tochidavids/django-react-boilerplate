@@ -128,6 +128,22 @@ export default {
 				light: "#44546F",
 				dark: "#9FADBC",
 			},
+			surface: {
+				light: "#FFFFFF",
+				dark: "#1D2125",
+				overlay: {
+					light: "#FFFFFF",
+					dark: "#282E33",
+				},
+				raised: {
+					light: "#FFFFFF",
+					dark: "#22272B",
+				},
+				sunken: {
+					light: "#F7F8F9",
+					dark: "#161A1D",
+				},
+			},
 		},
 	},
 	plugins: [],
