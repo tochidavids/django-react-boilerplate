@@ -542,8 +542,8 @@ video {
   margin: 0px;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
 .flex {
@@ -649,6 +649,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[url\(\.\.\/assets\/logo-gif\.gif\)\] {
+  background-image: url(../assets/logo-gif.gif);
+}
+
 .bg-contain {
   background-size: contain;
 }
@@ -693,11 +697,6 @@ video {
   outline-width: 0px;
 }
 
-.grayscale {
-  --tw-grayscale: grayscale(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .hover\:bg-brand-hover:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(133 184 255 / var(--tw-bg-opacity));
@@ -713,16 +712,11 @@ video {
   background-color: rgb(29 33 37 / var(--tw-bg-opacity));
 }
 
-:is(.dark .dark\:bg-\[url\(https\:\/\/trello\.com\/assets\/87e1af770a49ce8e84e3\.gif\)\]) {
-  background-image: url(https://trello.com/assets/87e1af770a49ce8e84e3.gif);
-}
-
 :is(.dark .dark\:text-subtle-dark) {
   --tw-text-opacity: 1;
   color: rgb(159 173 188 / var(--tw-text-opacity));
 }
 
-:is(.dark .dark\:hover\:bg-subtlest-dark:hover) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(140 155 171 / var(--tw-bg-opacity));
+:is(.dark .dark\:hover\:bg-neutral-dark:hover) {
+  background-color: #A1BDD914;
 }

@@ -130,6 +130,10 @@ export default {
 				light: "#44546F",
 				dark: "#9FADBC",
 			},
+			neutral: {
+				light: "#091E420F",
+				dark: "#A1BDD914",
+			},
 			surface: {
 				light: "#FFFFFF",
 				dark: "#1D2125",
