@@ -23,6 +23,8 @@
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 -   [Django](https://www.djangoproject.com/)
+-   [React JS](https://react.dev/)
+-   [Vite](https://vitejs.dev/)
 -   [SCSS](https://sass-lang.com/)
 -   [Tailwind](https://tailwindcss.com/)
 
@@ -42,13 +44,13 @@ $ python manage.py runserver
 
 ## Acknowledgements
 
-- [Trello](https://trello.com/)
-- [Connecting React to Django](https://dev.to/nagatodev/how-to-connect-django-to-reactjs-1a71)
-- [Django Rest Framework](https://www.django-rest-framework.org/)
-- [Multiple React Apps](https://stackoverflow.com/questions/70151868/django-react-connecting-multiple-apps-from-one-template)
-- [React Router DOM](https://reactrouter.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [Connecting Google Authentication](https://dev.to/mdrhmn/django-google-authentication-using-django-allauth-18f8)
+-   [Trello](https://trello.com/)
+-   [Connecting React to Django](https://dev.to/nagatodev/how-to-connect-django-to-reactjs-1a71)
+-   [Django Rest Framework](https://www.django-rest-framework.org/)
+-   [Multiple React Apps](https://stackoverflow.com/questions/70151868/django-react-connecting-multiple-apps-from-one-template)
+-   [React Router DOM](https://reactrouter.com/)
+-   [Google Fonts](https://fonts.google.com/)
+-   [Connecting Google Authentication](https://dev.to/mdrhmn/django-google-authentication-using-django-allauth-18f8)
 
 ## Contact
 
