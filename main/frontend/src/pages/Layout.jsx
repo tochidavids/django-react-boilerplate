@@ -2,22 +2,22 @@ import { Outlet, Link } from "react-router-dom";
 
 export default function Layout() {
 	return (
-		<div className="text-text-light dark:text-text-light bg-surface-light dark:bg-surface-dark">
-			<header className="flex justify-between items-center h-12 w-screen px-8">
+		<div className="text-subtle-light dark:text-subtle-dark bg-surface-light dark:bg-surface-dark">
+			<header className="flex justify-between items-center h-12 w-screen px-8 border-b-[0.5px] border-solid border-grey-dark text-[14px]">
 				<nav className="flex justify-center items-center gap-8">
 					<Link to="/" className="">
-						<div className="h-4 dark:bg-[url(https://trello.com/assets/87e1af770a49ce8e84e3.gif)]"></div>
+						<div className="h-4 w-12 dark:bg-[url(https://trello.com/assets/87e1af770a49ce8e84e3.gif)]"></div>
 					</Link>
 					<div className="relative cursor-pointer">
 						Workspaces{" "}
-						<i className="fa-solid fa-chevron-down ml-4"></i>
+						<i className="fa-solid fa-chevron-down ml-2"></i>
 						<div className="">
 							{/* <Link to='/'>
                             </Link> */}
 						</div>
 					</div>
 					<div className="relative cursor-pointer">
-						Recent <i className="fa-solid fa-chevron-down ml-4"></i>
+						Recent <i className="fa-solid fa-chevron-down ml-2"></i>
 						<div className="">
 							{/* <Link to='/'>
                             </Link> */}
@@ -25,7 +25,7 @@ export default function Layout() {
 					</div>
 					<div className="relative cursor-pointer">
 						Starred{" "}
-						<i className="fa-solid fa-chevron-down ml-4"></i>
+						<i className="fa-solid fa-chevron-down ml-2"></i>
 						<div className="">
 							{/* <Link to='/'>
                             </Link> */}
@@ -33,11 +33,12 @@ export default function Layout() {
 					</div>
 				</nav>
 				<nav className="flex justify-center items-center gap-4">
-					<div className="flex items-center justify-start gap-4 px-4 border-1 border-solid border-red-dark">
+					<div className="flex items-center justify-start gap-4 px-4 border border-solid border-grey-dark">
 						<i className="fa-solid fa-magnifying-glass"></i>
-						<input type="text" className="border-0 outline-0" />
+						<input type="text" className="border-0 outline-0 bg-surface-light dark:bg-surface-dark dark:text-subtle-dark" />
 					</div>
-					<i className="fa-regular fa-bell w-8 h-8"></i>
+					{/* <div className=""></div> */}
+					<i className="fa-regular fa-bell text-inverse-dark w-8 h-8 bg-brand-dark hover:bg-brand-hover rounded-full flex justify-center items-center"></i>
 					<i className="fa-solid fa-circle-question"></i>
 					<i
 						className="fa-solid fa-circle-half-stroke"

@@ -1,3 +1,3 @@
 export default function Boards() {
-	return <main className="h-full w-100%">BOARDS SECTION</main>;
+	return <main className="h-[calc(100vh-4rem)] w-full">BOARDS SECTION</main>;
 }

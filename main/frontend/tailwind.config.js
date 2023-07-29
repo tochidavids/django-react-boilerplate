@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ["./src/**/*.{html,js,jsx}"],
+	mode: "jit",
+	content: ["./*.html", "./src/**/*.{js,jsx}", "./src/**/**/*.{js,jsx}"],
 	darkMode: "class",
 	theme: {
 		colors: {
@@ -99,6 +100,7 @@ export default {
 			brand: {
 				light: "#0C66E4",
 				dark: "#579DFF",
+				hover: "#85B8FF",
 			},
 			danger: {
 				light: "#AE2A19",
