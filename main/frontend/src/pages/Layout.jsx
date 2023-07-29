@@ -5,8 +5,8 @@ export default function Layout() {
 		<div className="text-subtle-light dark:text-subtle-dark bg-surface-light dark:bg-surface-dark">
 			<header className="flex justify-between items-center h-12 w-screen px-8 border-b-[0.5px] border-solid border-grey-dark text-[14px]">
 				<nav className="flex justify-center items-center gap-8">
-					<Link to="/" className="">
-						<div className="h-4 w-12 dark:bg-[url(https://trello.com/assets/87e1af770a49ce8e84e3.gif)]"></div>
+					<Link to="/" className="p-2 hover:bg-subtlest-light dark:hover:bg-subtlest-dark rounded">
+						<div className="h-4 w-20 bg-no-repeat bg-contain grayscale m-0 p-0 dark:bg-[url(https://trello.com/assets/87e1af770a49ce8e84e3.gif)]"></div>
 					</Link>
 					<div className="relative cursor-pointer">
 						Workspaces{" "}
