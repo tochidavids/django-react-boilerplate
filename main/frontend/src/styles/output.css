@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -538,6 +538,10 @@ video {
   position: relative;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -550,16 +554,28 @@ video {
   height: 1rem;
 }
 
-.w-full {
-  width: 100%;
+.h-8 {
+  height: 2rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-screen {
   width: 100vw;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-center {
@@ -570,15 +586,70 @@ video {
   justify-content: space-between;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-8 {
   gap: 2rem;
 }
 
-.border {
-  border-width: 1px;
+.border-0 {
+  border-width: 0px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-red-dark {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 156 143 / var(--tw-border-opacity));
+}
+
+.border-red-light {
+  --tw-border-opacity: 1;
+  border-color: rgb(174 42 25 / var(--tw-border-opacity));
+}
+
+.bg-surface-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.text-text-light {
+  --tw-text-opacity: 1;
+  color: rgb(23 43 77 / var(--tw-text-opacity));
+}
+
+.outline-0 {
+  outline-width: 0px;
+}
+
+:is(.dark .dark\:bg-surface-dark) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 33 37 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-\[url\(https\:\/\/trello\.com\/assets\/87e1af770a49ce8e84e3\.gif\)\]) {
+  background-image: url(https://trello.com/assets/87e1af770a49ce8e84e3.gif);
+}
+
+:is(.dark .dark\:text-text-light) {
+  --tw-text-opacity: 1;
+  color: rgb(23 43 77 / var(--tw-text-opacity));
 }

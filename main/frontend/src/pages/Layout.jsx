@@ -1,29 +1,14 @@
-import { useRef } from "react";
 import { Outlet, Link } from "react-router-dom";
 
-function Layout() {
-	const containerRef = useRef();
-	const toggleDarkMode = () => {
-		if (containerRef.current.classList.includes("dark"))
-			containerRef.current.classList.remove("dark");
-		else containerRef.current.classList.add("dark");
-	};
-
+export default function Layout() {
 	return (
-		<div
-			ref={containerRef}
-			className="dark text-text-light dark:text-text-light bg-surface-light dark:bg-surface-dark"
-		>
+		<div className="text-text-light dark:text-text-light bg-surface-light dark:bg-surface-dark">
 			<header className="flex justify-between items-center h-12 w-screen px-8">
 				<nav className="flex justify-center items-center gap-8">
-					<Link to="/">
-						<img
-							className="h-4 w-full border"
-							src="https://trello.com/assets/d947df93bc055849898e.gif"
-							alt=""
-						/>
+					<Link to="/" className="">
+						<div className="h-4 dark:bg-[url(https://trello.com/assets/87e1af770a49ce8e84e3.gif)]"></div>
 					</Link>
-					<div className="relative">
+					<div className="relative cursor-pointer">
 						Workspaces{" "}
 						<i className="fa-solid fa-chevron-down ml-4"></i>
 						<div className="">
@@ -31,14 +16,14 @@ function Layout() {
                             </Link> */}
 						</div>
 					</div>
-					<div className="relative">
+					<div className="relative cursor-pointer">
 						Recent <i className="fa-solid fa-chevron-down ml-4"></i>
 						<div className="">
 							{/* <Link to='/'>
                             </Link> */}
 						</div>
 					</div>
-					<div className="relative">
+					<div className="relative cursor-pointer">
 						Starred{" "}
 						<i className="fa-solid fa-chevron-down ml-4"></i>
 						<div className="">
@@ -48,7 +33,7 @@ function Layout() {
 					</div>
 				</nav>
 				<nav className="flex justify-center items-center gap-4">
-					<div className="flex items-center justify-start gap-4 px-4">
+					<div className="flex items-center justify-start gap-4 px-4 border-1 border-solid border-red-dark">
 						<i className="fa-solid fa-magnifying-glass"></i>
 						<input type="text" className="border-0 outline-0" />
 					</div>
@@ -56,7 +41,7 @@ function Layout() {
 					<i className="fa-solid fa-circle-question"></i>
 					<i
 						className="fa-solid fa-circle-half-stroke"
-						onClick={toggleDarkMode}
+						onClick={() => console.log("change mode")}
 					></i>
 				</nav>
 			</header>
@@ -64,5 +49,3 @@ function Layout() {
 		</div>
 	);
 }
-
-export default Layout;

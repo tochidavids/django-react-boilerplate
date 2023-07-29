@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Boards from "./pages/u/Boards";
 
-function App() {
+export default function App() {
   return (
     <>
       <BrowserRouter>
@@ -15,5 +15,3 @@ function App() {
     </>
   )
 }
-
-export default App
