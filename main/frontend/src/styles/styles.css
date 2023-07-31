@@ -152,6 +152,9 @@ header nav.right .account i {
   background-repeat: no-repeat;
   background-size: contain;
 }
+header nav.right .account .nav-info {
+  bottom: -1.95rem;
+}
 header nav.right > * {
   position: relative;
 }
