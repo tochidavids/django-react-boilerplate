@@ -11,13 +11,16 @@ export default function Layout() {
 	return (
 		<div className="text-subtle-light dark:text-subtle-dark bg-surface-light dark:bg-surface-dark">
 			<header className="flex justify-between items-center h-12 w-screen px-4 border-b-[0.25px] border-solid border-neutral-light dark:border-neutral-dark text-[14px]">
+				{/* left navbar */}
 				<nav className="flex justify-center items-center gap-2">
+					{/* logo img */}
 					<Link
 						to="/"
 						className="h-8 px-2 hover:bg-neutral-light dark:hover:bg-neutral-dark rounded flex items-center"
 					>
 						<div className="h-4 w-20 bg-no-repeat bg-contain m-0 p-0 bg-[url(../assets/logo-gif.gif)]"></div>
 					</Link>
+					{/* workspaces */}
 					<div className="relative cursor-pointer  ">
 						<div
 							className="h-8 px-3 rounded hover:bg-neutral-light dark:hover:bg-neutral-dark flex items-center"
@@ -36,10 +39,26 @@ export default function Layout() {
 								showDropDown.workspaces ? "" : "hidden"
 							}`}
 						>
-							<Link to="/">Trello Workspace</Link>
+							<h1 className="">Current Workspace</h1>
+							<div className="flex justify-start items-center gap-8">
+								<div className="p-12 bg-green-light rounded">
+									T
+								</div>
+								<h2>Trello Workspace</h2>
+							</div>
+							<div className="w-full h-1 bg-neutral-light dark:bg-neutral-dark"></div>
+							<Link
+								to="/"
+								className="flex justify-start items-center gap-8 rounded hover:bg-neutral-light dark:hover:bg-neutral-dark"
+							>
+								<div className="p-12 bg-green-light rounded">
+									T
+								</div>
+								<h2>Trello Workspace</h2>
+							</Link>
 						</div>
 					</div>
-
+					{/* recent */}
 					<div className="relative cursor-pointer  ">
 						<div
 							className="h-8 px-3 rounded hover:bg-neutral-light dark:hover:bg-neutral-dark flex items-center"
@@ -58,18 +77,11 @@ export default function Layout() {
 								showDropDown.recent ? "" : "hidden"
 							}`}
 						>
-							<h1 className="">Current Workspace</h1>
-							<div className="flex justify-start items-center gap-8">
-								<div className="p-12 bg-green-light rounded">T</div>
-								<h2>Trello Workspace</h2>
-							</div>
-							<div className="w-full h-1 bg-neutral-light dark:bg-neutral-dark"></div>
-							<Link to='/' className="flex justify-start items-center gap-8 rounded hover:bg-neutral-light dark:hover:bg-neutral-dark">
-								<div className="p-12 bg-green-light rounded">T</div>
-								<h2>Trello Workspace</h2>
-							</Link>
+							{" "}
+							drop down info here
 						</div>
 					</div>
+					{/* starred */}
 					<div className="relative cursor-pointer">
 						<div
 							className="h-8 px-3 rounded hover:bg-neutral-light dark:hover:bg-neutral-dark flex items-center"
@@ -88,10 +100,11 @@ export default function Layout() {
 								showDropDown.starred ? "" : "hidden"
 							}`}
 						>
-							<Link to="/">Trello Workspace</Link>
+							drop down info here
 						</div>
 					</div>
 				</nav>
+				{/* right navbar */}
 				<nav className="flex justify-center items-center gap-4">
 					<div className="flex items-center justify-start gap-4 px-4 border border-solid border-grey-dark">
 						<i className="fa-solid fa-magnifying-glass"></i>
