@@ -86,9 +86,9 @@ export default function Layout() {
 					</div>
 				</nav>
 				<nav className="right">
-					<div className="">
+					<div className="search">
 						<i className="fa-solid fa-magnifying-glass"></i>
-						<input type="text" />
+						<input type="text" placeholder="Search" />
 					</div>
 					<i className="fa-regular fa-bell"></i>
 					<i className="fa-solid fa-circle-question"></i>

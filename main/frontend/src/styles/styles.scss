@@ -73,6 +73,15 @@ $neutral-dark: #a1bdd914;
 	font-family: "Roboto", sans-serif;
 }
 
+ul {
+	list-style-type: none;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+
 body {
 	overflow-x: hidden;
 	background-color: $surface-light;
@@ -149,6 +158,28 @@ header {
 
 		&.right {
 			gap: 1rem;
+
+			.search {
+				@include flexCenter();
+				gap: 0.6rem;
+				padding: 0 0.6rem;
+				height: 2rem;
+				border-radius: 5px;
+				border: 1px solid $grey-bolder-dark;
+
+				i {
+					font-size: 12.5px;
+				}
+
+				input {
+					font-size: 14px;
+					width: 100%;
+
+					&:focus {
+						width: 680px;
+					}
+				}
+			}
 		}
 	}
 }

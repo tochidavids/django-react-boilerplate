@@ -6,6 +6,15 @@
   font-family: "Roboto", sans-serif;
 }
 
+ul {
+  list-style-type: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
 body {
   overflow-x: hidden;
   background-color: #fff;
@@ -74,4 +83,24 @@ header nav.left .logo:hover {
 }
 header nav.right {
   gap: 1rem;
+}
+header nav.right .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 0.6rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: 1px solid #dee4ea;
+}
+header nav.right .search i {
+  font-size: 12.5px;
+}
+header nav.right .search input {
+  font-size: 14px;
+  width: 100%;
+}
+header nav.right .search input:focus {
+  width: 680px;
 }/*# sourceMappingURL=styles.css.map */
