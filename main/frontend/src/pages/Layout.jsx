@@ -89,12 +89,22 @@ export default function Layout() {
 					<div className="search">
 						<i className="fa-solid fa-magnifying-glass"></i>
 						<input type="text" placeholder="Search" />
+						<div className="nav-info search-info">
+							Search <div className="square">/</div>
+						</div>
 					</div>
-					<i className="fa-regular fa-bell"></i>
-					<i className="fa-solid fa-circle-question end-icons grey-hover"></i>
-					<i className="fa-solid fa-circle-half-stroke end-icons grey-hover"></i>
+					<i className="fa-regular fa-bell">
+						<div className="nav-info">Notifications</div>
+					</i>
+					<i className="fa-solid fa-circle-question end-icons grey-hover">
+						<div className="nav-info">Information</div>
+					</i>
+					<i className="fa-solid fa-circle-half-stroke end-icons grey-hover">
+						<div className="nav-info">Theme</div>
+					</i>
 					<div className="account grey-hover">
 						<i></i>
+						<div className="nav-info">Account</div>
 					</div>
 				</nav>
 			</header>

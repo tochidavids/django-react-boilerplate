@@ -38,7 +38,7 @@ header {
   height: 3rem;
   width: 100%;
   padding: 0 1rem;
-  border-bottom: 0.5px solid #dee4ea;
+  border-bottom: 1px solid #dee4ea;
   font-size: 14px;
 }
 header nav {
@@ -107,7 +107,7 @@ header nav.right .search input {
   width: 100%;
 }
 header nav.right .search input:focus {
-  width: 650px;
+  width: 600px;
 }
 header nav.right .fa-bell {
   background-color: #0055cc;
@@ -122,6 +122,11 @@ header nav.right .fa-bell {
 }
 header nav.right .fa-bell:hover {
   background-color: #09326c;
+}
+header nav.right .fa-bell .nav-info {
+  transform: rotate(-45deg);
+  bottom: -1rem;
+  left: 0rem;
 }
 header nav.right .end-icons {
   font-size: 17px;
@@ -146,4 +151,40 @@ header nav.right .account i {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+header nav.right > * {
+  position: relative;
+}
+header nav.right > *:hover .nav-info {
+  display: block;
+}
+header nav.right > *:hover .nav-info.search-info {
+  display: flex;
+}
+header nav.right .nav-info {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -1.75rem;
+  color: #fff;
+  background-color: #1d2125;
+  opacity: 0.75;
+  border-radius: 5px;
+  padding: 0.25rem 0.45rem;
+  font-size: 12.5px;
+  display: none;
+  font-weight: 400;
+}
+header nav.right .nav-info.search-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  display: none;
+}
+header nav.right .nav-info.search-info .square {
+  border-radius: 2px;
+  border: 1px solid #fff;
+  padding: 0.1rem 0.5rem;
+  color: #fff;
 }/*# sourceMappingURL=styles.css.map */

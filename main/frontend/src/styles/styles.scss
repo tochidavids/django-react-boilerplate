@@ -112,7 +112,7 @@ header {
 	height: 3rem;
 	width: 100%;
 	padding: 0 1rem;
-	border-bottom: 0.5px solid $grey-bolder-dark;
+	border-bottom: 1px solid $grey-bolder-dark;
 	font-size: 14px;
 
 	nav {
@@ -182,7 +182,7 @@ header {
 					width: 100%;
 
 					&:focus {
-						width: 650px;
+						width: 600px;
 					}
 				}
 			}
@@ -199,6 +199,12 @@ header {
 				&:hover {
 					background-color: $blue-bolder-light;
 				}
+
+				.nav-info {
+					transform: rotate(-45deg);
+					bottom: -1rem;
+                    left: 0rem;
+				}
 			}
 
 			.end-icons {
@@ -211,16 +217,57 @@ header {
 			.account {
 				height: 2rem;
 				width: 2rem;
-                border-radius: 50%;
-                @include flexCenter();
+				border-radius: 50%;
+				@include flexCenter();
 
 				i {
 					height: 1.5rem;
 					width: 1.5rem;
-                    background: red;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: contain;
+					background: red;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+			}
+
+			& > * {
+				position: relative;
+
+				&:hover .nav-info {
+					display: block;
+
+					&.search-info {
+						display: flex;
+					}
+				}
+			}
+
+			.nav-info {
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%);
+				bottom: -1.75rem;
+				// bottom: 0rem;
+				color: $surface-light;
+				background-color: $surface-dark;
+				opacity: 0.75;
+				border-radius: 5px;
+				padding: 0.25rem 0.45rem;
+				font-size: 12.5px;
+				display: none;
+				font-weight: 400;
+
+				&.search-info {
+					@include flexCenter();
+					gap: 0.5rem;
+					display: none;
+
+					.square {
+						border-radius: 2px;
+						border: 1px solid $surface-light;
+						padding: 0.1rem 0.5rem;
+						color: $surface-light;
+					}
 				}
 			}
 		}
