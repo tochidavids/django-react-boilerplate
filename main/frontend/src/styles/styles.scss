@@ -103,7 +103,7 @@ header {
 	height: 3rem;
 	width: 100%;
 	padding: 0 1rem;
-	border-bottom: 0.25px solid $text-light;
+	border-bottom: 0.5px solid $neutral-light;
 	font-size: 14px;
 
 	nav {
@@ -130,12 +130,14 @@ header {
 			}
 
 			.logo {
+                @include flexCenter();
 				height: 1.5rem;
 				width: 5rem;
 				background-repeat: no-repeat;
 				background-size: contain;
-				filter: brightness(50%);
+                background-position: center;
 				background-image: url(../assets/logo-png.png);
+				filter: brightness(50%);
 
 				&:hover {
 					background-image: url(../assets/logo-gif.gif);

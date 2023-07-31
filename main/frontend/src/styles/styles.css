@@ -29,7 +29,7 @@ header {
   height: 3rem;
   width: 100%;
   padding: 0 1rem;
-  border-bottom: 0.25px solid #172b4d;
+  border-bottom: 0.5px solid rgba(9, 30, 66, 0.0588235294);
   font-size: 14px;
 }
 header nav {
@@ -58,12 +58,16 @@ header nav.left div.nav-item i {
   color: #172b4d;
 }
 header nav.left .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 1.5rem;
   width: 5rem;
   background-repeat: no-repeat;
   background-size: contain;
-  filter: brightness(50%);
+  background-position: center;
   background-image: url(../assets/logo-png.png);
+  filter: brightness(50%);
 }
 header nav.left .logo:hover {
   background-image: url(../assets/logo-gif.gif);
