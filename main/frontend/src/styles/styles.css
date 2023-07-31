@@ -67,7 +67,7 @@ header nav.left .logo {
   background-size: contain;
   background-position: center;
   background-image: url(../assets/logo-png.png);
-  filter: brightness(50%);
+  filter: brightness(0) saturate(100%) invert(30%) sepia(53%) saturate(323%) hue-rotate(179deg) brightness(91%) contrast(88%);
 }
 header nav.left .logo:hover {
   background-image: url(../assets/logo-gif.gif);
