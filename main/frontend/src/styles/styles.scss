@@ -1,69 +1,140 @@
-$text-light: #172B4D;
-$text-disabled-light: #091E424F;
-$lime-light: #4C6B1F;
-$lime-bolder-light: #37471F;
-$red-light: #AE2A19;
-$red-bolder-light: #601E16;
-$orange-light: #974F0C;
-$orange-bolder-light: #5F3811;
-$yellow-light: #7F5F01;
-$yellow-bolder-light: #533F04;
-$green-light: #216E4E;
-$green-bolder-light: #164B35;
-$teal-light: #206B74;
-$teal-bolder-light: #1D474C;
-$blue-light: #0055CC;
-$blue-bolder-light: #09326C;
-$purple-light: #5E4DB2;
-$purple-bolder-light: #352C63;
-$magenta-light: #943D73;
-$magenta-bolder-light: #50253F;
-$grey-light: #44546F;
-$grey-bolder-light: #091E42;
+$text-light: #172b4d;
+$text-disabled-light: #091e424f;
+$lime-light: #4c6b1f;
+$lime-bolder-light: #37471f;
+$red-light: #ae2a19;
+$red-bolder-light: #601e16;
+$orange-light: #974f0c;
+$orange-bolder-light: #5f3811;
+$yellow-light: #7f5f01;
+$yellow-bolder-light: #533f04;
+$green-light: #216e4e;
+$green-bolder-light: #164b35;
+$teal-light: #206b74;
+$teal-bolder-light: #1d474c;
+$blue-light: #0055cc;
+$blue-bolder-light: #09326c;
+$purple-light: #5e4db2;
+$purple-bolder-light: #352c63;
+$magenta-light: #943d73;
+$magenta-bolder-light: #50253f;
+$grey-light: #44546f;
+$grey-bolder-light: #091e42;
+$surface-light: #fff;
 
-$text-dark: #B6C2CF;
-$text-disabled-dark: #BFDBF847;
-$lime-dark: #B3DF72;
-$lime-bolder-dark: #D3F1A7;
-$red-dark: #FF9C8F;
-$red-bolder-dark: #FFD2CC;
-$orange-dark: #FEC57B;
-$orange-bolder-dark: #FFE2BD;
-$yellow-dark: #F5CD47;
-$yellow-bolder-dark: #F8E6A0;
+$text-dark: #b6c2cf;
+$text-disabled-dark: #bfdbf847;
+$lime-dark: #b3df72;
+$lime-bolder-dark: #d3f1a7;
+$red-dark: #ff9c8f;
+$red-bolder-dark: #ffd2cc;
+$orange-dark: #fec57b;
+$orange-bolder-dark: #ffe2bd;
+$yellow-dark: #f5cd47;
+$yellow-bolder-dark: #f8e6a0;
 $green-dark: #7ee2b8;
-$green-bolder-dark: #BAF3DB;
-$teal-dark: #8BDBE5;
-$teal-bolder-dark: #C1F0F5;
-$blue-dark: #85B8FF;
-$blue-bolder-dark: #CCE0FF;
-$purple-dark: #B8ACF6;
-$purple-bolder-dark: #DFD8FD;
-$magenta-dark: #F797D2;
-$magenta-bolder-dark: #FDD0EC;
-$grey-dark: #9FADBC;
-$grey-bolder-dark: #DEE4EA;
+$green-bolder-dark: #baf3db;
+$teal-dark: #8bdbe5;
+$teal-bolder-dark: #c1f0f5;
+$blue-dark: #85b8ff;
+$blue-bolder-dark: #cce0ff;
+$purple-dark: #b8acf6;
+$purple-bolder-dark: #dfd8fd;
+$magenta-dark: #f797d2;
+$magenta-bolder-dark: #fdd0ec;
+$grey-dark: #9fadbc;
+$grey-bolder-dark: #dee4ea;
+$surface-dark: #1d2125;
 
 @mixin flexCenter() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @mixin absoluteCenter() {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: $text-light;
+	font-family: sans-serif;
 }
 
 body {
-    overflow-x: hidden;
+	overflow-x: hidden;
+	background-color: $surface-light;
+
+	&.dark {
+		background-color: $surface-dark;
+		* {
+			color: $text-dark;
+		}
+	}
 }
 
+// ===============
+// Re-used
+// ===============
+
+.grey-hover &:hover {
+	background-color: $grey-light;
+}
+
+// ===============
+// Header
+// ===============
+
+header {
+	@include flexCenter();
+	height: 3rem;
+	width: 100%;
+	padding: 0 1rem;
+	border-bottom: 0.25px solid $text-light;
+	font-size: 14px;
+
+	nav {
+		@include flexCenter();
+
+		&.left {
+			gap: 0.5rem;
+
+			.nav-item {
+				height: 2rem;
+				@include flexCenter();
+				padding: 0 0.5rem;
+				cursor: pointer;
+				border-radius: 5px;
+			}
+
+			div.nav-item {
+				position: relative;
+				i {
+					margin-left: 0.5rem;
+				}
+			}
+
+			.logo {
+				height: 1rem;
+				width: 4rem;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-image: url(../assets/logo-gif.gif);
+			}
+		}
+
+		&.right {
+			gap: 1rem;
+		}
+	}
+}
+
+// ===============
+//
+// ===============

@@ -1,125 +1,98 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 export default function Layout() {
-	const [showDropDown, setShowDropDown] = useState({
-		workspaces: false,
-		recent: false,
-		starred: false,
-	});
+	// const [showDropDown, setShowDropDown] = useState({
+	// 	workspaces: false,
+	// 	recent: false,
+	// 	starred: false,
+	// });
+
+	// used neutral color for most
 
 	return (
-		<div className="text-subtle-light dark:text-subtle-dark bg-surface-light dark:bg-surface-dark">
-			<header className="flex justify-between items-center h-12 w-screen px-4 border-b-[0.25px] border-solid border-neutral-light dark:border-neutral-dark text-[14px]">
-				{/* left navbar */}
-				<nav className="flex justify-center items-center gap-2">
-					{/* logo img */}
-					<Link
-						to="/"
-						className="h-8 px-2 hover:bg-neutral-light dark:hover:bg-neutral-dark rounded flex items-center"
-					>
-						<div className="h-4 w-20 bg-no-repeat bg-contain m-0 p-0 bg-[url(../assets/logo-gif.gif)]"></div>
+		<div className="body-container">
+			<header>
+				<nav className="left">
+					<Link to="/" className="nav-item grey-hover">
+						<div className="logo"></div>
 					</Link>
 					{/* workspaces */}
-					<div className="relative cursor-pointer  ">
+					<div className="">
 						<div
-							className="h-8 px-3 rounded hover:bg-neutral-light dark:hover:bg-neutral-dark flex items-center"
-							onClick={() =>
-								setShowDropDown(old => ({
-									...old,
-									workspaces: !old.workspaces,
-								}))
-							}
+							className="nav-item grey-hover"
+							// onClick={() =>
+							// 	setShowDropDown(old => ({
+							// 		...old,
+							// 		workspaces: !old.workspaces,
+							// 	}))
+							// }
 						>
 							Workspaces
-							<i className="fa-solid fa-chevron-down ml-2"></i>
+							<i className="fa-solid fa-chevron-down"></i>
 						</div>
-						<div
+						{/* <article
 							className={`absolute -bottom-16 left-1/2 -translate-x-1/2 bg-surface-overlay-light dark:bg-surface-overlay-dark border border-neutral-light dark:border-neutral-dark border-solid rounded-lg ${
 								showDropDown.workspaces ? "" : "hidden"
 							}`}
 						>
-							<h1 className="">Current Workspace</h1>
-							<div className="flex justify-start items-center gap-8">
-								<div className="p-12 bg-green-light rounded">
-									T
-								</div>
-								<h2>Trello Workspace</h2>
-							</div>
-							<div className="w-full h-1 bg-neutral-light dark:bg-neutral-dark"></div>
-							<Link
-								to="/"
-								className="flex justify-start items-center gap-8 rounded hover:bg-neutral-light dark:hover:bg-neutral-dark"
-							>
-								<div className="p-12 bg-green-light rounded">
-									T
-								</div>
-								<h2>Trello Workspace</h2>
-							</Link>
-						</div>
+							drop down item here
+						</article> */}
 					</div>
 					{/* recent */}
-					<div className="relative cursor-pointer  ">
+					<div className="  ">
 						<div
-							className="h-8 px-3 rounded hover:bg-neutral-light dark:hover:bg-neutral-dark flex items-center"
-							onClick={() =>
-								setShowDropDown(old => ({
-									...old,
-									recent: !old.recent,
-								}))
-							}
+							className="nav-item grey-hover"
+							// onClick={() =>
+							// 	setShowDropDown(old => ({
+							// 		...old,
+							// 		recent: !old.recent,
+							// 	}))
+							// }
 						>
 							Recent
-							<i className="fa-solid fa-chevron-down ml-2"></i>
+							<i className="fa-solid fa-chevron-down"></i>
 						</div>
-						<div
+						{/* <div
 							className={`absolute -bottom-8 left-1/2 -translate-x-1/2 border border-neutral-light dark:border-neutral-dark border-solid rounded-lg ${
 								showDropDown.recent ? "" : "hidden"
 							}`}
 						>
 							{" "}
 							drop down info here
-						</div>
+						</div> */}
 					</div>
 					{/* starred */}
-					<div className="relative cursor-pointer">
+					<div className="">
 						<div
-							className="h-8 px-3 rounded hover:bg-neutral-light dark:hover:bg-neutral-dark flex items-center"
-							onClick={() =>
-								setShowDropDown(old => ({
-									...old,
-									starred: !old.starred,
-								}))
-							}
+							className="nav-item grey-hover"
+							// onClick={() =>
+							// 	setShowDropDown(old => ({
+							// 		...old,
+							// 		starred: !old.starred,
+							// 	}))
+							// }
 						>
 							Starred
-							<i className="fa-solid fa-chevron-down ml-2"></i>
+							<i className="fa-solid fa-chevron-down"></i>
 						</div>
-						<div
+						{/* <div
 							className={`absolute -bottom-16 left-1/2 -translate-x-1/2 ${
 								showDropDown.starred ? "" : "hidden"
 							}`}
 						>
 							drop down info here
-						</div>
+						</div> */}
 					</div>
 				</nav>
-				{/* right navbar */}
-				<nav className="flex justify-center items-center gap-4">
-					<div className="flex items-center justify-start gap-4 px-4 border border-solid border-grey-dark">
+				<nav className="right">
+					<div className="">
 						<i className="fa-solid fa-magnifying-glass"></i>
-						<input
-							type="text"
-							className="border-0 outline-0 bg-surface-light dark:bg-surface-dark dark:text-subtle-dark"
-						/>
+						<input type="text" />
 					</div>
-					{/* <div className=""></div> */}
-					<i className="fa-regular fa-bell text-inverse-dark w-8 h-8 bg-brand-dark hover:bg-brand-hover rounded-full flex justify-center items-center"></i>
+					<i className="fa-regular fa-bell"></i>
 					<i className="fa-solid fa-circle-question"></i>
-					<i
-						className="fa-solid fa-circle-half-stroke"
-						onClick={() => console.log("change mode")}
-					></i>
+					<i className="fa-solid fa-circle-half-stroke"></i>
 				</nav>
 			</header>
 			<Outlet />

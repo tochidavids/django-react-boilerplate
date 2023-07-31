@@ -2,8 +2,43 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #172b4d;
+  font-family: sans-serif;
 }
 
 body {
   overflow-x: hidden;
+  background-color: #fff;
+}
+body.dark {
+  background-color: #1d2125;
+}
+body.dark * {
+  color: #b6c2cf;
+}
+
+.grey-hover:hover {
+  background-color: #44546f;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+  padding: 0 1rem;
+  border-bottom: 0.25px solid #172b4d;
+  font-size: 14px;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav.left {
+  gap: 0.5rem;
+}
+header nav.right {
+  gap: 1rem;
 }/*# sourceMappingURL=styles.css.map */
