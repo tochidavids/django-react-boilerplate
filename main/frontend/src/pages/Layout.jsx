@@ -91,8 +91,8 @@ export default function Layout() {
 						<input type="text" placeholder="Search" />
 					</div>
 					<i className="fa-regular fa-bell"></i>
-					<i className="fa-solid fa-circle-question"></i>
-					<i className="fa-solid fa-circle-half-stroke"></i>
+					<i className="fa-solid fa-circle-question end-icons grey-hover"></i>
+					<i className="fa-solid fa-circle-half-stroke end-icons grey-hover"></i>
 				</nav>
 			</header>
 			<Outlet />

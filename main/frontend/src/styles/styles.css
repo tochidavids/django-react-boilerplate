@@ -38,7 +38,7 @@ header {
   height: 3rem;
   width: 100%;
   padding: 0 1rem;
-  border-bottom: 0.5px solid rgba(9, 30, 66, 0.0588235294);
+  border-bottom: 0.5px solid #dee4ea;
   font-size: 14px;
 }
 header nav {
@@ -82,7 +82,11 @@ header nav.left .logo:hover {
   background-image: url(../assets/logo-gif.gif);
 }
 header nav.right {
-  gap: 1rem;
+  gap: 0.5rem;
+}
+header nav.right i {
+  cursor: pointer;
+  border-radius: 50%;
 }
 header nav.right .search {
   display: flex;
@@ -96,11 +100,34 @@ header nav.right .search {
 }
 header nav.right .search i {
   font-size: 12.5px;
+  cursor: default;
 }
 header nav.right .search input {
   font-size: 14px;
   width: 100%;
 }
 header nav.right .search input:focus {
-  width: 680px;
+  width: 650px;
+}
+header nav.right .fa-bell {
+  background-color: #0055cc;
+  height: 2rem;
+  width: 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+  font-size: 16px;
+}
+header nav.right .fa-bell:hover {
+  background-color: #09326c;
+}
+header nav.right .end-icons {
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
 }/*# sourceMappingURL=styles.css.map */
