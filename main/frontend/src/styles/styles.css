@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #172b4d;
+  color: #44546f;
   font-family: "Roboto", sans-serif;
 }
 
@@ -55,13 +55,18 @@ header nav.left div.nav-item {
 }
 header nav.left div.nav-item i {
   margin-left: 0.5rem;
+  color: #172b4d;
 }
 header nav.left .logo {
-  height: 1rem;
-  width: 4rem;
+  height: 1.5rem;
+  width: 5rem;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(../assets/logo-light.png);
+  filter: brightness(50%);
+  background-image: url(../assets/logo-png.png);
+}
+header nav.left .logo:hover {
+  background-image: url(../assets/logo-gif.gif);
 }
 header nav.right {
   gap: 1rem;
