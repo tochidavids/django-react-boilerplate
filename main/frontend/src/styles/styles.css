@@ -25,6 +25,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
   height: 3rem;
   width: 100%;
   padding: 0 1rem;
@@ -38,6 +39,29 @@ header nav {
 }
 header nav.left {
   gap: 0.5rem;
+}
+header nav.left .nav-item {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+header nav.left div.nav-item {
+  padding: 0 0.75rem;
+  position: relative;
+}
+header nav.left div.nav-item i {
+  margin-left: 0.5rem;
+}
+header nav.left .logo {
+  height: 1rem;
+  width: 4rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../assets/logo-light.png);
 }
 header nav.right {
   gap: 1rem;
