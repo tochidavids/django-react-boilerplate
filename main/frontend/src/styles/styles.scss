@@ -265,6 +265,7 @@ header {
 					@include flexCenter();
 					gap: 0.5rem;
 					display: none;
+                    bottom: -2.25rem;
 
 					.square {
 						border-radius: 2px;

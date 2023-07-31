@@ -184,6 +184,7 @@ header nav.right .nav-info.search-info {
   align-items: center;
   gap: 0.5rem;
   display: none;
+  bottom: -2.25rem;
 }
 header nav.right .nav-info.search-info .square {
   border-radius: 2px;
