@@ -130,4 +130,20 @@ header nav.right .end-icons {
   align-items: center;
   height: 2rem;
   width: 2rem;
+}
+header nav.right .account {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav.right .account i {
+  height: 1.5rem;
+  width: 1.5rem;
+  background: red;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }/*# sourceMappingURL=styles.css.map */

@@ -93,6 +93,9 @@ export default function Layout() {
 					<i className="fa-regular fa-bell"></i>
 					<i className="fa-solid fa-circle-question end-icons grey-hover"></i>
 					<i className="fa-solid fa-circle-half-stroke end-icons grey-hover"></i>
+					<div className="account grey-hover">
+						<i></i>
+					</div>
 				</nav>
 			</header>
 			<Outlet />
