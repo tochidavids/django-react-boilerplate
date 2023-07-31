@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #172b4d;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -18,7 +18,7 @@ body.dark * {
 }
 
 .grey-hover:hover {
-  background-color: #44546f;
+  background-color: rgba(9, 30, 66, 0.0588235294);
 }
 
 header {
