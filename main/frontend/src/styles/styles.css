@@ -19,13 +19,6 @@ body {
   overflow-x: hidden;
   background-color: #fff;
 }
-body.dark {
-  background-color: #1d2125;
-}
-body.dark * {
-  color: #b6c2cf;
-}
-
 .grey-hover:hover {
   background-color: rgba(9, 30, 66, 0.0588235294);
 }
@@ -58,13 +51,27 @@ header nav.left .nav-item {
   cursor: pointer;
   border-radius: 5px;
 }
-header nav.left div.nav-item {
+header nav.left .drop-down {
   padding: 0 0.75rem;
   position: relative;
 }
-header nav.left div.nav-item i {
+header nav.left .drop-down i {
   margin-left: 0.5rem;
   color: #172b4d;
+}
+header nav.left .focus {
+  color: #0055cc;
+}
+header nav.left .focus i {
+  color: #0055cc;
+}
+header nav.left article {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -2rem;
+  border: 1px solid rgba(9, 30, 66, 0.0588235294);
+  border-radius: 20px;
 }
 header nav.left .logo {
   display: flex;
@@ -81,33 +88,30 @@ header nav.left .logo {
 header nav.left .logo:hover {
   background-image: url(../assets/logo-gif.gif);
 }
+header nav.left .plus {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+  background-color: #0055cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+header nav.left .plus i {
+  color: #fff;
+  font-size: 13px;
+}
+header nav.left .plus.hover {
+  background-color: #09326c;
+}
 header nav.right {
   gap: 0.5rem;
 }
 header nav.right i {
   cursor: pointer;
   border-radius: 50%;
-}
-header nav.right .search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0 0.6rem;
-  height: 2rem;
-  border-radius: 5px;
-  border: 1px solid #dee4ea;
-}
-header nav.right .search i {
-  font-size: 12.5px;
-  cursor: default;
-}
-header nav.right .search input {
-  font-size: 14px;
-  width: 100%;
-}
-header nav.right .search input:focus {
-  width: 600px;
 }
 header nav.right .fa-bell {
   background-color: #0055cc;
@@ -177,18 +181,4 @@ header nav.right .nav-info {
   font-size: 12.5px;
   display: none;
   font-weight: 400;
-}
-header nav.right .nav-info.search-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  display: none;
-  bottom: -2.25rem;
-}
-header nav.right .nav-info.search-info .square {
-  border-radius: 2px;
-  border: 1px solid #fff;
-  padding: 0.1rem 0.5rem;
-  color: #fff;
 }/*# sourceMappingURL=styles.css.map */

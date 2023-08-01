@@ -61,8 +61,7 @@ $neutral-dark: #a1bdd914;
 @mixin absoluteCenter() {
 	position: absolute;
 	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%);
 }
 
 * {
@@ -87,10 +86,7 @@ body {
 	background-color: $surface-light;
 
 	&.dark {
-		background-color: $surface-dark;
-		* {
-			color: $text-dark;
-		}
+		$surface-light: #000;
 	}
 }
 
@@ -129,13 +125,27 @@ header {
 				border-radius: 5px;
 			}
 
-			div.nav-item {
+			.drop-down {
 				padding: 0 0.75rem;
 				position: relative;
 				i {
 					margin-left: 0.5rem;
 					color: $text-light;
 				}
+			}
+
+			.focus {
+				color: $blue-light;
+				i {
+					color: $blue-light;
+				}
+			}
+
+			article {
+				@include absoluteCenter();
+				bottom: -2rem;
+				border: 1px solid $neutral-light;
+				border-radius: 20px;
 			}
 
 			.logo {
@@ -154,6 +164,25 @@ header {
 					background-image: url(../assets/logo-gif.gif);
 				}
 			}
+
+			.plus {
+				width: 2rem;
+				height: 2rem;
+				border-radius: 5px;
+				background-color: $blue-light;
+				@include flexCenter();
+				cursor: pointer;
+				position: relative;
+
+				i {
+					color: #fff;
+					font-size: 13px;
+				}
+
+				&.hover {
+					background-color: $blue-bolder-light;
+				}
+			}
 		}
 
 		&.right {
@@ -162,29 +191,6 @@ header {
 			i {
 				cursor: pointer;
 				border-radius: 50%;
-			}
-
-			.search {
-				@include flexCenter();
-				gap: 0.6rem;
-				padding: 0 0.6rem;
-				height: 2rem;
-				border-radius: 5px;
-				border: 1px solid $grey-bolder-dark;
-
-				i {
-					font-size: 12.5px;
-					cursor: default;
-				}
-
-				input {
-					font-size: 14px;
-					width: 100%;
-
-					&:focus {
-						width: 600px;
-					}
-				}
 			}
 
 			.fa-bell {
@@ -203,7 +209,7 @@ header {
 				.nav-info {
 					transform: rotate(-45deg);
 					bottom: -1rem;
-                    left: 0rem;
+					left: 0rem;
 				}
 			}
 
@@ -229,9 +235,9 @@ header {
 					background-size: contain;
 				}
 
-                .nav-info {
-                    bottom: -1.95rem;
-                }
+				.nav-info {
+					bottom: -1.95rem;
+				}
 			}
 
 			& > * {
@@ -247,9 +253,7 @@ header {
 			}
 
 			.nav-info {
-				position: absolute;
-				left: 50%;
-				transform: translate(-50%);
+				@include absoluteCenter();
 				bottom: -1.75rem;
 				// bottom: 0rem;
 				color: $surface-light;
@@ -260,20 +264,6 @@ header {
 				font-size: 12.5px;
 				display: none;
 				font-weight: 400;
-
-				&.search-info {
-					@include flexCenter();
-					gap: 0.5rem;
-					display: none;
-                    bottom: -2.25rem;
-
-					.square {
-						border-radius: 2px;
-						border: 1px solid $surface-light;
-						padding: 0.1rem 0.5rem;
-						color: $surface-light;
-					}
-				}
 			}
 		}
 	}
