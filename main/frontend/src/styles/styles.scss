@@ -114,6 +114,22 @@ header {
 	nav {
 		@include flexCenter();
 
+		article {
+			@include absoluteCenter();
+			bottom: -2rem;
+			border: 1px solid $grey-bolder-dark;
+			border-radius: 5px;
+			box-shadow: 0px 0px 2px #c3c3c3;
+			padding: 1.5rem 0;
+			z-index: 990;
+			background-color: #fff;
+
+			& > * {
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+			}
+		}
+
 		&.left {
 			gap: 0.5rem;
 
@@ -139,13 +155,6 @@ header {
 				i {
 					color: $blue-light;
 				}
-			}
-
-			article {
-				@include absoluteCenter();
-				bottom: -2rem;
-				border: 1px solid $neutral-light;
-				border-radius: 20px;
 			}
 
 			.logo {
@@ -220,15 +229,63 @@ header {
 				width: 2rem;
 			}
 
+			.account {
+				position: absolute;
+				left: unset;
+				bottom: unset;
+				transform: none;
+				right: 2rem;
+				top: 3.5rem;
+				font-weight: 400;
+
+				h1 {
+					font-size: 13px;
+					text-transform: uppercase;
+					font-weight: 700;
+					margin-bottom: 1rem;
+					color: $blue-light;
+				}
+
+				h2 {
+					// font-weight: 400;
+					font-size: 16px;
+				}
+
+				p {
+					font-size: 13px;
+					margin-bottom: 0.5rem;
+				}
+
+				form {
+					padding: 0;
+					input {
+						padding: 0 1.5rem;
+					}
+				}
+
+				.account-link {
+					display: block;
+					width: 100%;
+					height: 2rem;
+					text-decoration: none;
+					background: transparent;
+					text-align: left;
+					display: flex;
+					align-items: center;
+					font-size: 14px;
+					cursor: pointer;
+
+					&:hover {
+						background-color: $neutral-light;
+					}
+				}
+			}
+
 			& > * {
 				position: relative;
 
 				&:hover .nav-info {
 					display: block;
-
-					&.search-info {
-						display: flex;
-					}
 				}
 			}
 
@@ -243,6 +300,7 @@ header {
 				font-size: 12.5px;
 				display: none;
 				font-weight: 400;
+				z-index: 999;
 			}
 		}
 	}

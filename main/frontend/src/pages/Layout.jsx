@@ -84,9 +84,35 @@ export default function Layout() {
 					<i className="fa-solid fa-circle-half-stroke end-icons grey-hover">
 						<div className="nav-info">Theme</div>
 					</i>
-					<i className="fa-solid fa-user end-icons grey-hover">
+					<i
+						className="fa-solid fa-user end-icons grey-hover"
+						onClick={() => {
+							if (activeDropDown === "account")
+								setActiveDropDown("");
+							else setActiveDropDown("account");
+						}}
+					>
 						<div className="nav-info">Account</div>
 					</i>
+					{activeDropDown === "account" ? (
+						<article className="account">
+							<h1>account</h1>
+							<h2>Tochi Davids</h2>
+							<p>tochidavids18@gmail.com</p>
+							<Link to="/" className="account-link grey-hover">
+								Profile
+							</Link>
+							<form action="">
+								<input
+									type="submit"
+									className="account-link grey-hover"
+									value="Logout"
+								/>
+							</form>
+						</article>
+					) : (
+						""
+					)}
 				</nav>
 			</header>
 			<Outlet />

@@ -39,6 +39,22 @@ header nav {
   justify-content: center;
   align-items: center;
 }
+header nav article {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -2rem;
+  border: 1px solid #dee4ea;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px #c3c3c3;
+  padding: 1.5rem 0;
+  z-index: 990;
+  background-color: #fff;
+}
+header nav article > * {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 header nav.left {
   gap: 0.5rem;
 }
@@ -64,14 +80,6 @@ header nav.left .focus {
 }
 header nav.left .focus i {
   color: #0055cc;
-}
-header nav.left article {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: -2rem;
-  border: 1px solid rgba(9, 30, 66, 0.0588235294);
-  border-radius: 20px;
 }
 header nav.left .logo {
   display: flex;
@@ -140,14 +148,55 @@ header nav.right .end-icons {
   height: 2rem;
   width: 2rem;
 }
+header nav.right .account {
+  position: absolute;
+  left: unset;
+  bottom: unset;
+  transform: none;
+  right: 2rem;
+  top: 3.5rem;
+  font-weight: 400;
+}
+header nav.right .account h1 {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0055cc;
+}
+header nav.right .account h2 {
+  font-size: 16px;
+}
+header nav.right .account p {
+  font-size: 13px;
+  margin-bottom: 0.5rem;
+}
+header nav.right .account form {
+  padding: 0;
+}
+header nav.right .account form input {
+  padding: 0 1.5rem;
+}
+header nav.right .account .account-link {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  text-decoration: none;
+  background: transparent;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+header nav.right .account .account-link:hover {
+  background-color: rgba(9, 30, 66, 0.0588235294);
+}
 header nav.right > * {
   position: relative;
 }
 header nav.right > *:hover .nav-info {
   display: block;
-}
-header nav.right > *:hover .nav-info.search-info {
-  display: flex;
 }
 header nav.right .nav-info {
   position: absolute;
@@ -162,4 +211,5 @@ header nav.right .nav-info {
   font-size: 12.5px;
   display: none;
   font-weight: 400;
+  z-index: 999;
 }/*# sourceMappingURL=styles.css.map */
