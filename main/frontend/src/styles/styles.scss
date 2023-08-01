@@ -220,26 +220,6 @@ header {
 				width: 2rem;
 			}
 
-			.account {
-				height: 2rem;
-				width: 2rem;
-				border-radius: 50%;
-				@include flexCenter();
-
-				i {
-					height: 1.5rem;
-					width: 1.5rem;
-					background: red;
-					background-position: center;
-					background-repeat: no-repeat;
-					background-size: contain;
-				}
-
-				.nav-info {
-					bottom: -1.95rem;
-				}
-			}
-
 			& > * {
 				position: relative;
 
@@ -255,7 +235,6 @@ header {
 			.nav-info {
 				@include absoluteCenter();
 				bottom: -1.75rem;
-				// bottom: 0rem;
 				color: $surface-light;
 				background-color: $surface-dark;
 				opacity: 0.75;

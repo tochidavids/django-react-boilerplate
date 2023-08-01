@@ -84,10 +84,9 @@ export default function Layout() {
 					<i className="fa-solid fa-circle-half-stroke end-icons grey-hover">
 						<div className="nav-info">Theme</div>
 					</i>
-					<div className="account grey-hover">
-						<i className="fa-solid fa-user"></i>
+					<i className="fa-solid fa-user end-icons grey-hover">
 						<div className="nav-info">Account</div>
-					</div>
+					</i>
 				</nav>
 			</header>
 			<Outlet />

@@ -140,25 +140,6 @@ header nav.right .end-icons {
   height: 2rem;
   width: 2rem;
 }
-header nav.right .account {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header nav.right .account i {
-  height: 1.5rem;
-  width: 1.5rem;
-  background: red;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-header nav.right .account .nav-info {
-  bottom: -1.95rem;
-}
 header nav.right > * {
   position: relative;
 }
