@@ -66,3 +66,4 @@ def signup(request):
     return render(request, "signup.html", {
             "message": 'Something went wrong.'
         })
+

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
 
 export default function Layout() {
 	const [activeDropDown, setActiveDropDown] = useState("");
@@ -115,7 +116,10 @@ export default function Layout() {
 					)}
 				</nav>
 			</header>
-			<Outlet />
+			<div className="main-container">
+				<Sidebar />
+				<Outlet />
+			</div>
 		</div>
 	);
 }
