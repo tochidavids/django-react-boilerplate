@@ -229,29 +229,33 @@ header nav.right .nav-info {
   flex-direction: column;
   gap: 1rem;
 }
-.sidebar .boards {
+.sidebar .nav-link {
   width: 100%;
   height: 2rem;
-  font-size: 16px;
-  font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 13px;
   text-decoration: none;
   display: flex;
   align-items: center;
-  padding-left: 0.5rem;
+  padding-left: 2.5rem;
 }
-.sidebar .boards.focus {
+.sidebar .nav-link.focus {
   color: #0055cc;
 }
-.sidebar .boards.focus i {
+.sidebar .nav-link.focus i {
   color: #0055cc;
 }
-.sidebar .boards:hover {
-  background-color: rgba(161, 189, 217, 0.0784313725);
+.sidebar .nav-link:hover {
+  background-color: rgba(9, 30, 66, 0.0588235294);
 }
-.sidebar .boards i {
+.sidebar .nav-link i {
   padding-right: 0.5rem;
+}
+.sidebar .boards {
+  font-weight: 700;
+  font-size: 16px;
+  padding-left: 0.5rem;
 }
 .sidebar .line {
   height: 1px;
@@ -264,4 +268,42 @@ header nav.right .nav-info {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+.sidebar .add i {
+  font-size: 15px;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.sidebar .add i:hover {
+  background-color: rgba(9, 30, 66, 0.0588235294);
+}
+.sidebar .workspace {
+  width: 100%;
+}
+.sidebar .workspace .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  height: 3rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.sidebar .workspace .title:hover {
+  background-color: rgba(9, 30, 66, 0.0588235294);
+}
+.sidebar .workspace .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.25rem;
 }/*# sourceMappingURL=styles.css.map */
