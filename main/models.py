@@ -9,7 +9,7 @@ class User(AbstractUser):
     recent = ArrayField(models.IntegerField(), default=list)
 
     def __str__(self):
-        return self.first_name, self.last_name
+        return f'{self.first_name} {self.last_name}'
 
 class Workspace(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='workspace_creator')
@@ -48,7 +48,7 @@ class Card(models.Model):
     achived = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.title
+        return {self.title}
 
 class Label(models.Model):
     name = models.CharField(max_length=50)
