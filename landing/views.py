@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import json
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login
 # from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
 # from django.http import JsonResponse
@@ -37,11 +37,6 @@ def login_view(request):
             })
     else:
         return render(request, "login.html")
-
-
-def logout_view(request):
-    logout(request)
-    return HttpResponseRedirect('/')
 
 def signup(request):
     if request.method == 'POST':

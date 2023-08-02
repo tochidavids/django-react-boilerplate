@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from rest_framework import viewsets
+from django.shortcuts import render, HttpResponseRedirect
+from rest_framework import viewsets, status
+from rest_framework.response import Response
+from django.contrib.auth import logout
+from rest_framework.views import APIView
 from .serializers import UserSerializer, BoardSerializer, WorkspaceSerializer, ListSerializer, CardSerializer, LabelSerializer, ChecklistSerializer, ListItemSerializer
 from .models import User, Board, Workspace, List, Card, Label, Checklist, ListItem
 
@@ -8,36 +11,14 @@ from .models import User, Board, Workspace, List, Card, Label, Checklist, ListIt
 def index(request, view):
     return render(request, "main/index.html")
 
-# @api_view(['GET'])
-# def current_user(request):
-#     user = request.user
-#     serializer = UserSerializer(user)
-#     return Response(serializer.data)
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect('/')
 
-# @api_view(['GET', 'POST'])
-# def users(request):
-#     if request.method == 'GET':
-#         user = User.objects.all()
-#         serializer = UserSerializer(user, many=True)
-#         return Response(serializer.data)
-
-#     elif request.method == 'POST':
-#         serializer = UserSerilizer(data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(status=status.HTTP_201_CREATED)
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-# @api_view(['DELETE'])
-# def delete_user(request, pk):
-#     try:
-#         user = User.objects.get(pk=pk)
-#     except User.DoesNotExist:
-#         return Response(status=status.HTTP_404_NOT_FOUND)
-
-#     if request.method == 'DELETE':
-#         user.delete()
-#         return Response(status=status.HTTP_204_NO_CONTENT)
+class LogoutView(APIView):
+    def post(self, request):
+        logout(request)
+        return Response(status=status.HTTP_200_OK)
 
 class CurrentUserView(viewsets.ModelViewSet):
     serializer_class = UserSerializer 
