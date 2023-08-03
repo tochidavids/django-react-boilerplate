@@ -8,8 +8,8 @@ export default function Boards() {
 			<h1>Your Boards</h1>
 			<section className="all-boards">
 				{list.map(value => (
-					<Link to="/" key={value}>
-						<img src="https://picsum.photos/300/150" alt="" />
+					<Link to="/board-name" key={value}>
+						<img src="https://picsum.photos/225/125" alt="" />
 						<h1>Board Name {value} </h1>
 					</Link>
 				))}
