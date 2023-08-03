@@ -7,8 +7,11 @@ export default function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/boards" element={<Layout />}>
               <Route index element={<Boards />}/>
+              <Route path=":workspace">
+                  <Route  />
+              </Route>
           </Route>
         </Routes>
       </BrowserRouter>

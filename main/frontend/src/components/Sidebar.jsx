@@ -6,7 +6,7 @@ export default function Sidebar() {
 
 	return (
 		<nav className="sidebar">
-			<Link to="/" className="nav-link boards focus">
+			<Link to="/boards" className="nav-link boards focus">
 				<i className="fa-brands fa-trello"></i>
 				Boards
 			</Link>
@@ -33,15 +33,11 @@ export default function Sidebar() {
 							<i className="fa-brands fa-trello"></i>
 							Boards
 						</Link>
-						<Link to="/highlights" className="nav-link">
-							<i className="fa-solid fa-heart"></i>
-							Highlights
-						</Link>
 						<Link to="/members" className="nav-link">
 							<i className="fa-solid fa-user"></i>
 							Members
 						</Link>
-						<Link to="/" className="nav-link">
+						<Link to="/settings" className="nav-link">
 							<i className="fa-solid fa-gear"></i>
 							Settings
 						</Link>
