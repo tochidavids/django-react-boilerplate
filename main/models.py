@@ -15,7 +15,6 @@ class Workspace(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='workspace_creator')
     members = models.ManyToManyField(User, blank=True, related_name='workspace_members')
     name = models.CharField(max_length=50)
-    background = models.ImageField(default='defaultWorkspace.jpg')
 
     def __str__(self):
         return self.name
@@ -27,6 +26,7 @@ class Board(models.Model):
     workspace = models.ForeignKey(Workspace, on_delete=models.CASCADE, related_name='board_workspace')
     starred = models.BooleanField(default=False)
     achived = models.BooleanField(default=False)
+    background = models.ImageField(default='default.jpg')
 
     def __str__(self):
         return self.name

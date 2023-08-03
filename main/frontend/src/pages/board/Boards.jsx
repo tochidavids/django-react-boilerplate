@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { getDatabaseData } from "../../main";
 
 export default function Boards() {
-	const [boards, setBoards] = useState();
+	const [boards, setBoards] = useState([]);
 
 	useEffect(() => {
 		const getData = async () => {
@@ -21,12 +21,13 @@ export default function Boards() {
 		<main className="boards">
 			<h1>Your Boards</h1>
 			<section className="all-boards">
-				{ boards && boards.map(value => (
-					<Link to="/board-name" key={value}>
-						<img src="https://picsum.photos/225/125" alt="" />
-						<h1>Board Name {value} </h1>
-					</Link>
-				))}
+				{boards &&
+					boards.map((board, index) => (
+						<Link to="/board-name" key={index}>
+							<img src={board.background} alt="" />
+							<h1>{board.name}</h1>
+						</Link>
+					))}
 			</section>
 		</main>
 	);
