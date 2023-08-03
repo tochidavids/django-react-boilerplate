@@ -47,15 +47,24 @@ export default function Sidebar() {
 						</div>
 						{showWorkspaceNav ? (
 							<div className="links">
-								<Link to="/home" className="nav-link">
+								<Link
+									to={`w/${workspace.id}/home  `}
+									className="nav-link"
+								>
 									<i className="fa-brands fa-trello"></i>
 									Boards
 								</Link>
-								<Link to="/members" className="nav-link">
+								<Link
+									to={`w/${workspace.id}/members`}
+									className="nav-link"
+								>
 									<i className="fa-solid fa-user"></i>
 									Members
 								</Link>
-								<Link to="/settings" className="nav-link">
+								<Link
+									to={`w/${workspace.id}/settings`}
+									className="nav-link"
+								>
 									<i className="fa-solid fa-gear"></i>
 									Settings
 								</Link>
