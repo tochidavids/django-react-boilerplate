@@ -34,5 +34,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('landing.urls')),
     path('<str:view>/', include(('main.urls', 'main'), namespace='main')),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+    path(r'logout', views.LogoutView.as_view(), name='logout')
+
 ]

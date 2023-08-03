@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
+import { logout } from "../main";
 
 export default function Layout() {
 	const [activeDropDown, setActiveDropDown] = useState("");
@@ -103,7 +104,7 @@ export default function Layout() {
 							<Link to="/" className="account-link grey-hover">
 								Profile
 							</Link>
-							<form action="">
+							<form action="" onSubmit={logout}>
 								<input
 									type="submit"
 									className="account-link grey-hover"

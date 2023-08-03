@@ -1,13 +1,27 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+import { getDatabaseData } from "../../main";
 
 export default function Boards() {
+	const [boards, setBoards] = useState();
+
+	useEffect(() => {
+		const getData = async () => {
+			const boards = await getDatabaseData("boards");
+			const currentUser = await getDatabaseData("current-user");
+			if (boards)
+				setBoards(
+					boards.filter(board => board.creator == currentUser[1].id),
+				);
+		};
+		getData();
+	}, []);
+
 	return (
 		<main className="boards">
 			<h1>Your Boards</h1>
 			<section className="all-boards">
-				{list.map(value => (
+				{ boards && boards.map(value => (
 					<Link to="/board-name" key={value}>
 						<img src="https://picsum.photos/225/125" alt="" />
 						<h1>Board Name {value} </h1>

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Boards from "./pages/board/Boards";
-import BoardView from "./pages/board/BoardView";
+// import BoardView from "./pages/board/BoardView";
 
 export default function App() {
 	return (
@@ -13,10 +13,10 @@ export default function App() {
 						{/* <Route path=":workspace">
                   <Route  />
                 </Route> */}
-						<Route
+						{/* <Route
 							path="/board-name"
 							element={<BoardView />}
-						></Route>
+						></Route> */}
 					</Route>
 				</Routes>
 			</BrowserRouter>
