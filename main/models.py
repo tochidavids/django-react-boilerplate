@@ -15,7 +15,7 @@ class Workspace(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='workspace_creator')
     members = models.ManyToManyField(User, blank=True, related_name='workspace_members')
     name = models.CharField(max_length=50)
-    background = models.ImageField(default='https://picsum.photos/200/100',null=True, blank=True)
+    background = models.ImageField(default='defaultWorkspace.jpg')
 
     def __str__(self):
         return self.name
