@@ -1,8 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { getDatabaseData } from "../main";
 
 export default function Sidebar() {
-	const [showWorkspaceNav, setShowWorkspaceNav] = useState(true);
+	const [showWorkspaceNav, setShowWorkspaceNav] = useState({});
+	const [workspaces, setWorkspaces] = useState([]);
+
+	useEffect(() => {
+		const getData = async () => {
+			const workspaces = await getDatabaseData("workspaces");
+			const currentUser = await getDatabaseData("current-user");
+			if (workspaces)
+				setWorkspaces(
+					workspaces.filter(
+						board => board.creator == currentUser[1].id,
+					),
+				);
+		};
+		getData();
+	}, []);
 
 	return (
 		<nav className="sidebar">
@@ -15,37 +31,40 @@ export default function Sidebar() {
 				<div className="">Workspaces</div>
 				<i className="fa-solid fa-plus"></i>
 			</div>
-			<section className="workspace">
-				<div
-					className="title"
-					onClick={() => setShowWorkspaceNav(old => !old)}
-				>
-					<h1>Trello Workspace</h1>
-					<i
-						className={`fa-solid fa-chevron-${
-							showWorkspaceNav ? "up" : "down"
-						}`}
-					></i>
-				</div>
-				{showWorkspaceNav ? (
-					<div className="links">
-						<Link to="/home" className="nav-link">
-							<i className="fa-brands fa-trello"></i>
-							Boards
-						</Link>
-						<Link to="/members" className="nav-link">
-							<i className="fa-solid fa-user"></i>
-							Members
-						</Link>
-						<Link to="/settings" className="nav-link">
-							<i className="fa-solid fa-gear"></i>
-							Settings
-						</Link>
-					</div>
-				) : (
-					""
-				)}
-			</section>
+			{workspaces &&
+				workspaces.map((workspace, index) => (
+					<section className="workspace" key={index}>
+						<div
+							className="title"
+							onClick={() => setShowWorkspaceNav(old => !old)}
+						>
+							<h1>{workspace.name}</h1>
+							<i
+								className={`fa-solid fa-chevron-${
+									showWorkspaceNav ? "up" : "down"
+								}`}
+							></i>
+						</div>
+						{showWorkspaceNav ? (
+							<div className="links">
+								<Link to="/home" className="nav-link">
+									<i className="fa-brands fa-trello"></i>
+									Boards
+								</Link>
+								<Link to="/members" className="nav-link">
+									<i className="fa-solid fa-user"></i>
+									Members
+								</Link>
+								<Link to="/settings" className="nav-link">
+									<i className="fa-solid fa-gear"></i>
+									Settings
+								</Link>
+							</div>
+						) : (
+							""
+						)}
+					</section>
+				))}
 		</nav>
 	);
 }
