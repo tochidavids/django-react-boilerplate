@@ -9,9 +9,9 @@ export default function App() {
         <Routes>
           <Route path="/boards" element={<Layout />}>
               <Route index element={<Boards />}/>
-              <Route path=":workspace">
+              {/* <Route path=":workspace">
                   <Route  />
-              </Route>
+              </Route> */}
           </Route>
         </Routes>
       </BrowserRouter>

@@ -6,7 +6,7 @@ export default function Sidebar() {
 
 	return (
 		<nav className="sidebar">
-			<Link to="/boards" className="nav-link boards focus">
+			<Link to="/boards" className="nav-link boards-link focus">
 				<i className="fa-brands fa-trello"></i>
 				Boards
 			</Link>
@@ -29,7 +29,7 @@ export default function Sidebar() {
 				</div>
 				{showWorkspaceNav ? (
 					<div className="links">
-						<Link to="/boards" className="nav-link">
+						<Link to="/home" className="nav-link">
 							<i className="fa-brands fa-trello"></i>
 							Boards
 						</Link>

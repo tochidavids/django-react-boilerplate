@@ -1,3 +1,3 @@
 export default function Boards() {
-	return <main className="">BOARDS SECTION</main>;
+	return <main className="boards"></main>;
 }
