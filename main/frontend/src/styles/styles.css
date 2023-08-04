@@ -511,8 +511,8 @@ header.workspace p {
 }
 .add-workspace .fa-xmark {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.5rem;
+  right: 1.5rem;
   font-size: 22px;
   cursor: pointer;
   width: 1.5rem;
