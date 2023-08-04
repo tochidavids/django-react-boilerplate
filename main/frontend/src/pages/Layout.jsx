@@ -17,7 +17,7 @@ export default function Layout({setCurrent}) {
 
 	return (
 		<div className="body-container">
-			<header>
+			<header className="page">
 				<nav className="left">
 					<Link to="/" className="nav-item grey-hover">
 						<div className="logo"></div>

@@ -28,7 +28,7 @@ body {
   background-color: rgba(9, 30, 66, 0.0588235294);
 }
 
-header {
+header.page {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,12 +39,12 @@ header {
   border-bottom: 1px solid #dee4ea;
   font-size: 14px;
 }
-header nav {
+header.page nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header nav article {
+header.page nav article {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -56,14 +56,14 @@ header nav article {
   z-index: 990;
   background-color: #fff;
 }
-header nav article > * {
+header.page nav article > * {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-header nav.left {
+header.page nav.left {
   gap: 0.5rem;
 }
-header nav.left .nav-item {
+header.page nav.left .nav-item {
   height: 2rem;
   display: flex;
   justify-content: center;
@@ -72,21 +72,21 @@ header nav.left .nav-item {
   cursor: pointer;
   border-radius: 5px;
 }
-header nav.left .drop-down {
+header.page nav.left .drop-down {
   padding: 0 0.75rem;
   position: relative;
 }
-header nav.left .drop-down i {
+header.page nav.left .drop-down i {
   margin-left: 0.5rem;
   color: #172b4d;
 }
-header nav.left .focus {
+header.page nav.left .focus {
   color: #0055cc;
 }
-header nav.left .focus i {
+header.page nav.left .focus i {
   color: #0055cc;
 }
-header nav.left .logo {
+header.page nav.left .logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,10 +98,10 @@ header nav.left .logo {
   background-image: url(../assets/logo-png.png);
   filter: brightness(0) saturate(100%) invert(30%) sepia(53%) saturate(323%) hue-rotate(179deg) brightness(91%) contrast(88%);
 }
-header nav.left .logo:hover {
+header.page nav.left .logo:hover {
   background-image: url(../assets/logo-gif.gif);
 }
-header nav.left .plus {
+header.page nav.left .plus {
   width: 2rem;
   height: 2rem;
   border-radius: 5px;
@@ -112,21 +112,21 @@ header nav.left .plus {
   cursor: pointer;
   position: relative;
 }
-header nav.left .plus i {
+header.page nav.left .plus i {
   color: #fff;
   font-size: 13px;
 }
-header nav.left .plus.hover {
+header.page nav.left .plus.hover {
   background-color: #09326c;
 }
-header nav.right {
+header.page nav.right {
   gap: 0.5rem;
 }
-header nav.right i {
+header.page nav.right i {
   cursor: pointer;
   border-radius: 50%;
 }
-header nav.right .fa-bell {
+header.page nav.right .fa-bell {
   background-color: #0055cc;
   height: 2rem;
   width: 2rem;
@@ -137,15 +137,15 @@ header nav.right .fa-bell {
   transform: rotate(45deg);
   font-size: 16px;
 }
-header nav.right .fa-bell:hover {
+header.page nav.right .fa-bell:hover {
   background-color: #09326c;
 }
-header nav.right .fa-bell .nav-info {
+header.page nav.right .fa-bell .nav-info {
   transform: rotate(-45deg);
   bottom: -1rem;
   left: 0rem;
 }
-header nav.right .end-icons {
+header.page nav.right .end-icons {
   font-size: 17px;
   display: flex;
   justify-content: center;
@@ -153,7 +153,7 @@ header nav.right .end-icons {
   height: 2rem;
   width: 2rem;
 }
-header nav.right .account {
+header.page nav.right .account {
   position: absolute;
   left: unset;
   bottom: unset;
@@ -162,27 +162,27 @@ header nav.right .account {
   top: 3.5rem;
   font-weight: 400;
 }
-header nav.right .account h1 {
+header.page nav.right .account h1 {
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #0055cc;
 }
-header nav.right .account h2 {
+header.page nav.right .account h2 {
   font-size: 16px;
 }
-header nav.right .account p {
+header.page nav.right .account p {
   font-size: 13px;
   margin-bottom: 0.5rem;
 }
-header nav.right .account form {
+header.page nav.right .account form {
   padding: 0;
 }
-header nav.right .account form input {
+header.page nav.right .account form input {
   padding: 0 1.5rem;
 }
-header nav.right .account .account-link {
+header.page nav.right .account .account-link {
   display: block;
   width: 100%;
   height: 2rem;
@@ -194,16 +194,16 @@ header nav.right .account .account-link {
   font-size: 14px;
   cursor: pointer;
 }
-header nav.right .account .account-link:hover {
+header.page nav.right .account .account-link:hover {
   background-color: rgba(9, 30, 66, 0.0588235294);
 }
-header nav.right > * {
+header.page nav.right > * {
   position: relative;
 }
-header nav.right > *:hover .nav-info {
+header.page nav.right > *:hover .nav-info {
   display: block;
 }
-header nav.right .nav-info {
+header.page nav.right .nav-info {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -223,7 +223,7 @@ header nav.right .nav-info {
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 4rem;
-  padding: 4rem;
+  padding: 3rem 4rem;
 }
 
 .sidebar {
@@ -347,6 +347,59 @@ header nav.right .nav-info {
   font-size: 18px;
 }
 
-header.workspace {
-  all: unset;
+header.workspace .top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+header.workspace span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.25rem;
+}
+header.workspace h1 {
+  font-weight: 500;
+  font-size: 20px;
+}
+header.workspace i {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+header.workspace button {
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #0055cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 0 0.75rem;
+  height: 2rem;
+}
+header.workspace button i {
+  color: #fff;
+}
+header.workspace button:hover {
+  background-color: #09326c;
+}
+header.workspace p {
+  font-size: 14px;
+}
+
+.header-line {
+  height: 1.5px;
+  width: 100%;
+  background-color: #dee4ea;
+  margin: 1.5rem 0;
 }/*# sourceMappingURL=styles.css.map */

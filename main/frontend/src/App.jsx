@@ -17,7 +17,7 @@ export default function App() {
 				<Routes>
 					<Route path="/" element={<Layout setCurrent={setCurrent} />}>
 						<Route path="boards" element={<Boards />} />
-						<Route path="w/:workspaceId" element={<WorkspaceLayout />}>
+						<Route path="w/:workspaceId" element={<WorkspaceLayout current={current} />}>
 							<Route path="home" element={<WorkspaceHome current={current} />} />
 							<Route
 								path="members"
