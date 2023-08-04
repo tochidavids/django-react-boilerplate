@@ -36,7 +36,11 @@ export default function Sidebar({ setCurrent }) {
 					onClick={() => setShowAddWorkspace(true)}
 				></i>
 			</div>
-			{showAddWorkspace ? <AddNewWorkspace /> : ""}
+			{showAddWorkspace ? (
+				<AddNewWorkspace setShowAddWorkspace={setShowAddWorkspace} />
+			) : (
+				""
+			)}
 			{workspaces &&
 				workspaces.map((workspace, index) => (
 					<section className="workspace" key={index}>

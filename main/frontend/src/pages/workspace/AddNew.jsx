@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { getDatabaseData } from "../../main";
-import svg from '../../assets/add-workspace.svg'
+import svg from "../../assets/add-workspace.svg";
 
-export default function AddNewWorkspace() {
+export default function AddNewWorkspace({ setShowAddWorkspace }) {
 	const [users, setUsers] = useState();
 
 	useEffect(() => {
@@ -15,33 +15,67 @@ export default function AddNewWorkspace() {
 	}, []);
 
 	return (
-		<div className="add-workspace">
-			<div className="container">
+		<>
+			<div className="add-background"></div>
+			<div className="add-workspace">
+				<i
+					className="fa-solid fa-xmark grey-hover"
+					onClick={() => setShowAddWorkspace(false)}
+				></i>
 				<form>
 					<h1>{"Let's build a Workspace"}</h1>
 					<h2>
 						Boost your productivity by making it easier for everyone
 						to access boards in one location.
 					</h2>
-					<label htmlFor="name">Workspace name</label>
-					<input type="text" placeholder="Taco's Co." name="name" />
-					<label htmlFor="description">Workspace description</label>
+					<ul>
+						<li>
+							<label htmlFor="name">Workspace name</label>
+							<input
+								type="text"
+								placeholder="Taco's Co."
+								id="name"
+							/>
+						</li>
+						<li>
+							<label htmlFor="members">Workspace members</label>
+							<input
+								list="members"
+								name="browser"
+								placeholder="John Smith"
+							/>
+							<datalist id="members">
+								{users &&
+									users.map((user, index) => (
+										<option
+											value={`${user.first_name} ${user.last_name}`}
+											key={index}
+										/>
+									))}
+							</datalist>
+						</li>
+						<li>
+							<label htmlFor="description">
+								Workspace description
+							</label>
+							<textarea
+								placeholder="Our team organises everything here"
+								id="description"
+							/>
+						</li>
+					</ul>
 					<input
-						type="text"
-						placeholder="Taco's Co."
-						name="description"
+						type="submit"
+						value="Create"
+						onClick={() => setShowAddWorkspace(false)}
 					/>
-					<input list="members" name="browser" />
-					<datalist id="members">
-						{users &&
-							users.map((user, index) => (
-								<option value={user} key={index} />
-							))}
-					</datalist>
-					<input type="submit" />
 				</form>
-				<img src={svg} alt="" />
+				<div className="right">
+					<div className="img-container">
+						<img src={svg} alt="" />
+					</div>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
