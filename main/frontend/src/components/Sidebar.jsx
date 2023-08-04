@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getDatabaseData } from "../main";
+import AddNewWorkspace from "../pages/workspace/AddNew";
 
 export default function Sidebar({ setCurrent }) {
 	const [showWorkspaceNav, setShowWorkspaceNav] = useState({});
 	const [workspaces, setWorkspaces] = useState([]);
+	const [showAddWorkspace, setShowAddWorkspace] = useState(false);
 
 	useEffect(() => {
 		const getData = async () => {
@@ -29,8 +31,12 @@ export default function Sidebar({ setCurrent }) {
 			<div className="line"></div>
 			<div className="add">
 				<div className="">Workspaces</div>
-				<i className="fa-solid fa-plus"></i>
+				<i
+					className="fa-solid fa-plus"
+					onClick={() => setShowAddWorkspace(true)}
+				></i>
 			</div>
+			{showAddWorkspace ? <AddNewWorkspace /> : ""}
 			{workspaces &&
 				workspaces.map((workspace, index) => (
 					<section className="workspace" key={index}>
