@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import { logout } from "../main";
 
-export default function Layout() {
+export default function Layout({setCurrent}) {
 	const [activeDropDown, setActiveDropDown] = useState("");
 
 	// const hideAll = () => {
@@ -118,7 +118,7 @@ export default function Layout() {
 				</nav>
 			</header>
 			<div className="main-container">
-				<Sidebar />
+				<Sidebar setCurrent={setCurrent} />
 				<Outlet />
 			</div>
 		</div>

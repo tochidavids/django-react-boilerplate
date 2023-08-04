@@ -345,4 +345,8 @@ header nav.right .nav-info {
   left: 0.75rem;
   color: #fff;
   font-size: 18px;
+}
+
+header.workspace {
+  all: unset;
 }/*# sourceMappingURL=styles.css.map */

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getDatabaseData } from "../main";
 
-export default function Sidebar() {
+export default function Sidebar({ setCurrent }) {
 	const [showWorkspaceNav, setShowWorkspaceNav] = useState({});
 	const [workspaces, setWorkspaces] = useState([]);
 
@@ -50,6 +50,7 @@ export default function Sidebar() {
 								<Link
 									to={`w/${workspace.id}/home  `}
 									className="nav-link"
+									onClick={() => setCurrent(workspace)}
 								>
 									<i className="fa-brands fa-trello"></i>
 									Boards
@@ -57,6 +58,7 @@ export default function Sidebar() {
 								<Link
 									to={`w/${workspace.id}/members`}
 									className="nav-link"
+									onClick={() => setCurrent(workspace)}
 								>
 									<i className="fa-solid fa-user"></i>
 									Members
@@ -64,6 +66,7 @@ export default function Sidebar() {
 								<Link
 									to={`w/${workspace.id}/settings`}
 									className="nav-link"
+									onClick={() => setCurrent(workspace)}
 								>
 									<i className="fa-solid fa-gear"></i>
 									Settings
