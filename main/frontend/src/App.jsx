@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Boards from "./pages/board/Boards";
-import WorkspaceHome from "./pages/workspace/Home";
 import WorkspaceMembers from "./pages/workspace/Members";
 import WorkspaceSettings from "./pages/workspace/Settings";
 import { useState } from "react";
@@ -18,7 +17,7 @@ export default function App() {
 					<Route path="/" element={<Layout setCurrent={setCurrent} />}>
 						<Route path="boards" element={<Boards />} />
 						<Route path="w/:workspaceId" element={<WorkspaceLayout current={current} />}>
-							<Route path="home" element={<WorkspaceHome current={current} />} />
+							<Route path="home" element={<Boards current={current} />} />
 							<Route
 								path="members"
 								element={<WorkspaceMembers current={current} />}
