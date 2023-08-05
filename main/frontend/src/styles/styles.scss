@@ -157,10 +157,29 @@ header.page {
 				}
 			}
 
-			.focus {
-				color: $blue-light;
-				i {
-					color: $blue-light;
+			article {
+				left: 3rem;
+				top: 3.5rem;
+				transform: none;
+				@include flexCenter();
+				align-items: flex-start;
+				justify-content: flex-start;
+				flex-direction: column;
+				font-size: 14px;
+				height: 7rem;
+				padding: 1rem 0;
+
+				.option {
+					width: 100%;
+					height: 2.5rem;
+					@include flexCenter();
+					justify-content: flex-start;
+					cursor: pointer;
+					
+					i {
+						width: 1.5rem;
+						@include flexCenter();
+					}
 				}
 			}
 
@@ -195,7 +214,7 @@ header.page {
 					font-size: 13px;
 				}
 
-				&.hover {
+				&:hover {
 					background-color: $blue-bolder-light;
 				}
 			}

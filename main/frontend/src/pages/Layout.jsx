@@ -2,9 +2,11 @@ import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import { logout } from "../main";
+import AddNewWorkspace from "./workspace/AddNew";
 
-export default function Layout({setCurrent}) {
+export default function Layout({ setCurrent }) {
 	const [activeDropDown, setActiveDropDown] = useState("");
+	const [showAddWorkspace, setShowAddWorkspace] = useState(false);
 
 	// const hideAll = () => {
 	// 	for (const key in showDropDown) {
@@ -23,45 +25,7 @@ export default function Layout({setCurrent}) {
 						<div className="logo"></div>
 					</Link>
 					<div
-						className={`nav-item drop-down grey-hover ${
-							activeDropDown === "workspaces" ? "focus" : ""
-						}`}
-						onClick={() => {
-							if (activeDropDown === "workspaces")
-								setActiveDropDown("");
-							else setActiveDropDown("workspaces");
-						}}
-					>
-						Workspaces
-						<i className="fa-solid fa-chevron-down"></i>
-						{activeDropDown === "workspaces" ? (
-							<article>drop down item here</article>
-						) : (
-							""
-						)}
-					</div>
-					<div
-						className={`nav-item drop-down grey-hover ${
-							activeDropDown === "starred" ? "focus" : ""
-						}`}
-						onClick={() => {
-							if (activeDropDown === "starred")
-								setActiveDropDown("");
-							else setActiveDropDown("starred");
-						}}
-					>
-						Starred
-						<i className="fa-solid fa-chevron-down"></i>
-						{activeDropDown === "starred" ? (
-							<article>drop down item here</article>
-						) : (
-							""
-						)}
-					</div>
-					<div
-						className={`plus ${
-							activeDropDown === "plus" ? "focus" : ""
-						}`}
+						className="plus"
 						onClick={() => {
 							if (activeDropDown === "plus")
 								setActiveDropDown("");
@@ -69,12 +33,27 @@ export default function Layout({setCurrent}) {
 						}}
 					>
 						<i className="fa-solid fa-plus"></i>
-						{activeDropDown === "plus" ? (
-							<article>drop down item here</article>
-						) : (
-							""
-						)}
 					</div>
+					{activeDropDown === "plus" ? (
+						<article>
+							<div className="option grey-hover">
+								<i className="fa-brands fa-trello"></i>
+								Create Board
+							</div>
+							<div
+								className="option grey-hover"
+								onClick={() => {
+									setShowAddWorkspace(true);
+									setActiveDropDown("");
+								}}
+							>
+								<i className="fa-solid fa-users"></i>
+								Create Workspace
+							</div>
+						</article>
+					) : (
+						""
+					)}
 				</nav>
 				<nav className="right">
 					<i className="fa-regular fa-bell">
@@ -118,9 +97,17 @@ export default function Layout({setCurrent}) {
 				</nav>
 			</header>
 			<div className="main-container">
-				<Sidebar setCurrent={setCurrent} />
+				<Sidebar
+					setCurrent={setCurrent}
+					setShowAddWorkspace={setShowAddWorkspace}
+				/>
 				<Outlet />
 			</div>
+			{showAddWorkspace ? (
+				<AddNewWorkspace setShowAddWorkspace={setShowAddWorkspace} />
+			) : (
+				""
+			)}
 		</div>
 	);
 }

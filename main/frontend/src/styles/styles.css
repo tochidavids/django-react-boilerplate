@@ -83,11 +83,34 @@ header.page nav.left .drop-down i {
   margin-left: 0.5rem;
   color: #172b4d;
 }
-header.page nav.left .focus {
-  color: #0055cc;
+header.page nav.left article {
+  left: 3rem;
+  top: 3.5rem;
+  transform: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 14px;
+  height: 7rem;
+  padding: 1rem 0;
 }
-header.page nav.left .focus i {
-  color: #0055cc;
+header.page nav.left article .option {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+header.page nav.left article .option i {
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header.page nav.left .logo {
   display: flex;
@@ -119,7 +142,7 @@ header.page nav.left .plus i {
   color: #fff;
   font-size: 13px;
 }
-header.page nav.left .plus.hover {
+header.page nav.left .plus:hover {
   background-color: #09326c;
 }
 header.page nav.right {
