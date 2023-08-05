@@ -64,7 +64,7 @@ header.page nav article > * {
   padding-right: 1.5rem;
 }
 header.page nav.left {
-  gap: 0.5rem;
+  gap: 1rem;
 }
 header.page nav.left .nav-item {
   height: 2rem;
@@ -349,7 +349,7 @@ header.page nav.right .nav-info {
   display: grid;
   grid-template-columns: repeat(3, 225px);
   gap: 2rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 .all-boards a {
   display: block;

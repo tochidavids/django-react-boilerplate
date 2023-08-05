@@ -138,7 +138,7 @@ header.page {
 		}
 
 		&.left {
-			gap: 0.5rem;
+			gap: 1rem;
 
 			.nav-item {
 				height: 2rem;
@@ -175,7 +175,7 @@ header.page {
 					@include flexCenter();
 					justify-content: flex-start;
 					cursor: pointer;
-					
+
 					i {
 						width: 1.5rem;
 						@include flexCenter();
@@ -449,7 +449,8 @@ header.page {
 	display: grid;
 	grid-template-columns: repeat(3, 225px);
 	gap: 2rem;
-	margin-top: 1rem;
+	// margin-top: 1rem;
+	margin: 1rem 0;
 
 	a {
 		display: block;
