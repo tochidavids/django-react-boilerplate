@@ -65,7 +65,6 @@ export default function Boards({ current }) {
 							<h1>{board.name}</h1>
 						</Link>
 					))}
-				{boards ? '': <p>Your boards appear here</p>}
 			</section>
 		</main>
 	);
