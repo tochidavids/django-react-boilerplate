@@ -11,6 +11,19 @@ export const getDatabaseData = async model => {
 };
 getDatabaseData("current-user");
 
+export const createWorkspace = async formInfo => {
+	fetch("/api/workspaces", {
+		method: "post",
+		headers: { "Content-Type": "application/json" },
+		body: {
+			name: formInfo.name,
+			description: formInfo.description,
+			creator: formInfo.user,
+			members: formInfo.members,
+		},
+	});
+};
+
 export const logout = async event => {
 	event.preventDefault();
 	fetch("/logout", {
