@@ -20,7 +20,7 @@ export default function AddNewWorkspace({ setShowAddWorkspace }) {
 			users.forEach(user => {
 				selectOptions.push({
 					value: user.id,
-					label: `${user.first_name} ${user.last_name}`,
+					label: `${user.first_name} ${user.last_name} (${user.email})`,
 				});
 			});
 			setSelectOptions(selectOptions);
@@ -28,6 +28,18 @@ export default function AddNewWorkspace({ setShowAddWorkspace }) {
 		};
 		getData();
 	}, []);
+
+	const inputStyles = {
+		width: "350px",
+		border: "2px solid #091e420f",
+		borderRadius: "3px",
+		height: "2.5rem",
+		fontSize: "14px",
+		padding: "0 0.5rem",
+		display: "flex",
+		justifyContent: "center",
+		alignItems: "center",
+	};
 
 	return (
 		<>
@@ -76,10 +88,24 @@ export default function AddNewWorkspace({ setShowAddWorkspace }) {
 								isSearchable
 								isMulti
 								id="members"
+								placeholder="John Smith (johnsmith@email.com)"
 								onChange={value => setMembersList(value)}
-								styles="width: 3rem;border: 2px solid #091e420f;border-radius: 3px;height: 2.5rem;font-size:14px;padding:0 0.5rem;"
-
-								// onFocus={}
+								styles={{
+									control: (baseStyles, state) => ({
+										...baseStyles,
+										...inputStyles,
+										borderColor: state.isFocused
+											? "#091e420f"
+											: "#0055cc",
+									}),
+									valueContainer: baseStyles => ({
+										...baseStyles,
+										...inputStyles,
+										border: "none",
+										overflow: "auto",
+									}),
+								}}
+								maxMenuHeight="8rem"
 							/>
 						</li>
 						<li>
