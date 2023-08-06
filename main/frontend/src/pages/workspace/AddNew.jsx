@@ -52,7 +52,6 @@ export default function AddNewWorkspace({ setShowAddWorkspace }) {
 				<form
 					onSubmit={event => {
 						event.preventDefault();
-						console.log("ref:", formRef.current.members);
 						let newMembersList = [];
 						membersList.forEach(member =>
 							newMembersList.push(member.value),
@@ -63,6 +62,13 @@ export default function AddNewWorkspace({ setShowAddWorkspace }) {
 							creator: currentUser.id,
 							members: newMembersList,
 						});
+						console.log("new workspace:", {
+							name: formRef.current.name.value,
+							description: formRef.current.description.value,
+							creator: currentUser.id,
+							members: newMembersList,
+						});
+						setShowAddWorkspace(false);
 					}}
 				>
 					<h1>{"Let's build a Workspace"}</h1>
@@ -121,11 +127,7 @@ export default function AddNewWorkspace({ setShowAddWorkspace }) {
 							/>
 						</li>
 					</ul>
-					<input
-						type="submit"
-						value="Create"
-						onClick={() => setShowAddWorkspace(false)}
-					/>
+					<input type="submit" value="Create" />
 				</form>
 				<div className="right">
 					<div className="img-container">

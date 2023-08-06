@@ -1,3 +1,3 @@
 export default function WorkspaceSettings() {
-	return <main>workspace settings</main>;
+	return <button className="delete-workspa">Delete this workspace?</button>
 }

@@ -13,7 +13,7 @@ getDatabaseData("current-user");
 
 export const createWorkspace = async formInfo => {
 	fetch("/api/workspaces", {
-		method: "post",
+		method: "POST",
 		headers: { "Content-Type": "application/json" },
 		body: {
 			name: formInfo.name,
